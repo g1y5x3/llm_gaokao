@@ -60,3 +60,19 @@ in the prompts
     因此，k 的值为 15。
     ```
     [full output](https://pastebin.com/Hi0LM1cD)
+
+    #### prompt (Wrong, when using `,`)
+    ```
+    messages = [
+        {"role": "system", "content": "你要回答数学题,题目中涉及到数学公式会以latex代码来表达,你在回答时如果要用到数学公式也要写成latex代码."},
+        {"role": "user",   "content": "已知 k \in R,\vec{a}=(2,5),\vec{b}=(6,k),\vec{a}//\vec{b},则 k 的值为?"},
+    ]
+    ```
+    #### answer
+    ```
+    ...
+    因此，k 的值为 \sqrt{5}，即：
+
+    k = \sqrt{5}
+    ```
+    [full output](https://pastebin.com/uzffp7Kg)

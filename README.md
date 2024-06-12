@@ -1,7 +1,11 @@
-# curious how good LLMs are at gaokao
+# curious how good LLMs are at gaokao (高考)
 
 Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They were first downloaded as image format, then manually combined them 
 into a single pdf file. The pdf download option from the site has too much extra stuff.
+
+Unfortunately, currently the [pdf](data/2024/math/shanghai/exam_with_answer.pdf) file is manually converted to 
+[markdown](data/2024/math/shanghai/exam_with_answer_chinese.md). I have trie [marker](https://github.com/VikParuchuri/marker) but the results were 
+unusable.
 
 ```python
 python yi-1.5-9b-chat.py
