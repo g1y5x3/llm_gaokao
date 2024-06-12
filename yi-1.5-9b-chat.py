@@ -7,8 +7,8 @@ tokenizer = AutoTokenizer.from_pretrained("01-ai/Yi-1.5-9B-Chat", use_fast=False
 model = AutoModelForCausalLM.from_pretrained("01-ai/Yi-1.5-9B-Chat", device_map="auto", torch_dtype='auto').eval()
 
 messages = [
-    {"role": "system", "content": "你要回答数学题，题目中涉及到数学表达式会以latex的方式来体现，你在回答时如果要用到数学表达式也用latex代码回复。"},
-    {"role": "user", "content": "已知 k \in R， \vec{a}=(2，5)， \vec{b}=(6，k), \vec{a} // \vec{b}，则k的值为？"},
+    {"role": "system", "content": "你要回答数学题,题目中涉及到数学表达式会以latex的方式来体现,你在回答时如果要用到数学表达式也用latex代码回复。"},
+    {"role": "user", "content": "已知 k \in R, \vec{a}=(2,5), \vec{b}=(6,k), \vec{a} // \vec{b}, 则k的值为?"},
 ]
 
 input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')

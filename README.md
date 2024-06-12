@@ -1,4 +1,8 @@
-Just curious how good LLMs are at 高考
+# curious how good LLMs are at 高考(gaokao)
+
+Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They were first downloaded as image format, then manually combined them 
+into a single pdf file. The pdf download option from the site has too much extra stuff.
+
 ```python
 python yi-1.5-9b-chat.py
 ```
