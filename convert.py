@@ -1,7 +1,7 @@
 import re
 import csv
 
-with open("data/2024_math_shanghai.md", "r") as f:
+with open("data/2024_math_shanghai/exam_with_answer.md", "r") as f:
     markdown_text = f.read()
 
 prompt_pattern = r'prompt: (.*?)\n'

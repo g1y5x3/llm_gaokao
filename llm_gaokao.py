@@ -5,7 +5,7 @@ model_name = "01-ai/Yi-1.5-9B-Chat"
 tokenizer = AutoTokenizer.from_pretrained("01-ai/Yi-1.5-9B-Chat", use_fast=False)
 model = AutoModelForCausalLM.from_pretrained("01-ai/Yi-1.5-9B-Chat", device_map="auto", torch_dtype='auto').eval()
 
-with open("data/2024_math_shanghai.csv", "r") as input_file:
+with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
