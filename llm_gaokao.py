@@ -9,8 +9,8 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
-    with open("answer/2024_math_shanghai.txt", "w") as output_file:
-        for row in csv_reader:
+    with open("response/2024_math_shanghai.txt", "w") as output_file:
+        for i, row in enumerate(csv_reader):
             prompt = row[0]
             answer = row[1]
 
@@ -23,8 +23,10 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_length=4096)
             response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
 
-            print(f"Prompt: {prompt}")
-            print(f"Response:\n{response}\n")
+            print(f"{i+1}. Prompt: {prompt}\n")
+            print(f"{i+1}. Response:\n{response}\n")
+            print(f"{i+1}. Answer: {answer}\n")
 
-            output_file.write(f"Prompt: {prompt}\n")
-            output_file.write(f"Response:\n{response}\n\n")
+            output_file.write(f"{i+1}. Prompt: {prompt}\n")
+            output_file.write(f"{i+1}. Response:\n{response}\n")
+            output_file.write(f"{i+1}. Answer:{answer}\n\n")

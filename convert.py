@@ -6,6 +6,7 @@ with open("data/2024_math_shanghai/exam_with_answer.md", "r") as f:
 
 prompt_pattern = r'prompt: (.*?)\n'
 answer_pattern = r'answer: (.*?)\n'
+image_tag_pattern = re.compile(r'<img[^>]*></img>')
 
 prompts = re.findall(prompt_pattern, markdown_text, re.DOTALL)
 answers = re.findall(answer_pattern, markdown_text, re.DOTALL)
@@ -16,9 +17,10 @@ with open(output_file, 'w', newline='') as file:
     writer.writerow(['prompt', 'answer'])
     for i, (prompt, answer) in enumerate(zip(prompts, answers)):
         print(i+1)
-        print(prompt.replace('$',''))
+        prompt_converted = image_tag_pattern.sub('', prompt.replace('$',''))
+        print(prompt_converted)
         print(answer.replace('$',''))
         print()
-        writer.writerow([prompt.replace('$',''), answer.replace('$','')])
+        writer.writerow([prompt_converted, answer.replace('$','')])
 
 print(f"Data has been saved to {output_file}")

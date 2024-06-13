@@ -8,7 +8,7 @@ Unfortunately, currently the [pdf](data/2024/math/shanghai/exam_with_answer.pdf)
 unusable.
 
 ```python
-python yi-1.5-9b-chat.py
+python llm_gaokao_test.py
 ```
 
 Question:
