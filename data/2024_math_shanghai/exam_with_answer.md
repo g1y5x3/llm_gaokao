@@ -6,7 +6,7 @@
 
    answer: $\sqrt{3}$
 
-3. prompt: 已知 $x \in R$，$x^2 - 2x - 3 < 0$的解集为？
+3. prompt: 已知 $x \in R$，$x^2 - 2x - 3 < 0$ 的解集为？
 
    answer: $(-1,3)$
 

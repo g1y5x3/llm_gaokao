@@ -17,10 +17,10 @@ with open(output_file, 'w', newline='') as file:
     writer.writerow(['prompt', 'answer'])
     for i, (prompt, answer) in enumerate(zip(prompts, answers)):
         print(i+1)
-        prompt_converted = image_tag_pattern.sub('', prompt.replace('$',''))
+        prompt_converted = image_tag_pattern.sub('', prompt)
         print(prompt_converted)
-        print(answer.replace('$',''))
+        print(answer)
         print()
-        writer.writerow([prompt_converted, answer.replace('$','')])
+        writer.writerow([prompt_converted, answer])
 
 print(f"Data has been saved to {output_file}")
