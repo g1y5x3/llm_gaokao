@@ -4,8 +4,8 @@ Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They 
 into a single pdf file. The pdf download option from the site has too much extra stuff.
 
 Unfortunately, currently the [pdf](data/2024_math_shanghai/exam_with_answer.pdf) file is manually converted to 
-[markdown](data/2024_math_shanghai/exam_with_answer.md). I have trie [marker](https://github.com/VikParuchuri/marker) but the results were 
-unusable.
+[markdown](data/2024_math_shanghai/exam_with_answer.md) (github doesn't render it well but vscode does). I have trie 
+[marker](https://github.com/VikParuchuri/marker) to speed-up the process but the results were not usable.
 
 Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for 
 the models. This conversion removes all the `$$` for latex display as well as handles image tags. 
@@ -48,7 +48,7 @@ k = 5x = 5 * 3 = 15
 因此，k 的值为 15。
 ```
 
-## Preliminary evaluation based on 2024 Shanghai Math using Yi-1.5-9B-Chat ([full response](response/2024_math_shanghai.txt))
+## Preliminary evaluation based on 2024 Shanghai Math using Yi-1.5-9B-Chat ([full response](response/Yi-1.5-9B-Chat-2024_math_shanghai.txt))
 
 一、填空题
 1. ✅ +4/4

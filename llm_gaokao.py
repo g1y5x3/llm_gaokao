@@ -9,7 +9,7 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
-    with open("response/2024_math_shanghai.txt", "w") as output_file:
+    with open("response/Yi-1.5-9B-Chat-2024_math_shanghai.txt", "w") as output_file:
         for i, row in enumerate(csv_reader):
             prompt = row[0]
             answer = row[1]
