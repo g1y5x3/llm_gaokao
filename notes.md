@@ -1,5 +1,4 @@
-## Yi-1.5-9B-Chat
-While trying to find a prompt format that works, here are some issues that I have encoutered,
+While trying to find a prompt format that works, here are some issues that I have encoutered (examples were based on Yi-1.5-9B-Chat),
 1. It seems like having extra space between the chinese text and equations/english would improve the answer dramatically.
     #### prompt (Correct, but not in latex)
     ```

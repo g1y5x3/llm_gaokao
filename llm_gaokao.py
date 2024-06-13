@@ -1,7 +1,7 @@
 import csv
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "Qwen/Qwen2-7B-Instruct"
+model_name = "01-ai/Yi-1.5-34B-Chat"
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype='auto').eval()
 
@@ -15,7 +15,7 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             answer = row[1]
 
             messages = [
-                {"role": "system", "content": "你要回答数学题，题目中涉及到数学公式会以latex代码来表达，你在回答时如果要用到数学公式也要写成latex代码。"},
+                {"role": "system", "content": "你要回答数学题，题目中涉及到数学公式会以latex代码来表达，你在回答时如果要用到数学公式也要写成latex。"},
                 {"role": "user",   "content": prompt},
             ]
 
