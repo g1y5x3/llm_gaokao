@@ -10,7 +10,7 @@ answer_pattern = r'answer: (.*?)\n'
 prompts = re.findall(prompt_pattern, markdown_text, re.DOTALL)
 answers = re.findall(answer_pattern, markdown_text, re.DOTALL)
 
-output_file = "data/2024_math_shanghai.csv"
+output_file = "data/2024_math_shanghai/exam_with_answer.csv"
 with open(output_file, 'w', newline='') as file:
     writer = csv.writer(file, quoting=csv.QUOTE_ALL)
     writer.writerow(['prompt', 'answer'])

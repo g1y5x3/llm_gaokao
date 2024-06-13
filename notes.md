@@ -76,3 +76,33 @@ in the prompts
     k = \sqrt{5}
     ```
     [full output](https://pastebin.com/uzffp7Kg)
+
+3. how math symbols are represented also matters
+    #### prompt (Correct, but based on the reasoning, seems like luck)
+    ```
+    messages = [
+        {"role": "system", "content": "你要回答数学题，题目中涉及到数学公式会以latex代码来表达，你在回答时如果要用到数学公式也要写成latex代码。"},
+        {"role": "user",   "content": "定义一个集合 \Omega，集合元素是空间内的点集，任取 P_1, P_2, P_3 \in \Omega，存在不完全为 0 的实数 \lambda_1, \lambda_2, \lambda_3，使得 \lambda_1 OP_1 + \lambda_2 OP_2 + \lambda_3 OP_3 = 0。 已知 (1,0,0) \in \Omega，则 (0,0,1) \not\in \Omega 的充分条件是？ A. (0,0,0) B. (-1,0,0) C. (0,1,0) D. (0,0,-1)"},
+    ]
+    ```
+    #### answer
+    ```
+    ...
+    因此，(0,0,1) \notin \Omega 的充分条件是 C. (0,1,0)。
+    ```
+    [full output](https://pastebin.com/R79Y9c4e)
+
+    #### prompt (Wrong, the only difference was `\notin` instead of `\not\in`)
+    ```
+    messages = [
+        {"role": "system", "content": "你要回答数学题，题目中涉及到数学公式会以latex代码来表达，你在回答时如果要用到数学公式也要写成latex代码。"},
+        {"role": "user",   "content": "定义一个集合 \Omega，集合元素是空间内的点集，任取 P_1, P_2, P_3 \in \Omega，存在不完全为 0 的实数 \lambda_1, \lambda_2, \lambda_3，使得 \lambda_1 OP_1 + \lambda_2 OP_2 + \lambda_3 OP_3 = 0。 已知 (1,0,0) \in \Omega，则 (0,0,1) \notin \Omega 的充分条件是？ A. (0,0,0) B. (-1,0,0) C. (0,1,0) D. (0,0,-1)"},
+    ]
+    ```
+    #### answer
+    ```
+    根据题意，集合 \Omega 中的元素是空间内的点集。我们要求出 (0,0,1) \in \Omega 的充分条件。
+    ...
+    因此，(0,0,1) \notin \Omega 的充分条件是 C. (0,1,0)。
+    ```
+    [full output](https://pastebin.com/qURjeaCe)

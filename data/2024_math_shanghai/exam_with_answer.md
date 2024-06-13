@@ -45,3 +45,19 @@
 12. prompt: 等比数列 $\{a_n\}$ 首项 $a_1>0$，$q>1$，记 $\ln=\{x-y|x,y\in[a_1,a_2]\cup[a_n,a_{n+1}]\}$，若对任意正整数 $n$，$\ln$ 是闭区间，则 $q$ 的范围是？
 
     answer: $[2,+\infty)$
+
+13. prompt: 已知气温温度和海水表层温度相关，且相关系数为正数，对此描述正确的是？ A. 气候温度高，海水表层温度就高 B. 气候温度高，海水表层温度就低 C. 随着气候温度由低到高，海水表层温度呈上升趋势 D. 随着气候温度由低到高，海水表层温度呈下降趋势
+    
+    answer: C
+
+14. prompt: 下列函数 $f(x)$ 的最小正周期是 $2\pi$ 的是？ A. $\sin x + \cos x$ B. $\sin x \cos x$ C. $\sin^2 x+\cos^2 x$ D. $\sin^2 x-\cos^2 x$
+    
+    answer: A
+
+15. prompt: 定义一个集合 $\Omega$，集合元素是空间内的点集，任取 $P_1, P_2, P_3 \in \Omega$，存在不完全为 0 的实数 $\lambda_1, \lambda_2, \lambda_3$，使得 $\lambda_1 OP_1 + \lambda_2 OP_2 + \lambda_3 OP_3 = 0$。 已知 $(1,0,0) \in \Omega$，则 $(0,0,1) \not\in \Omega$ 的充分条件是？ A. $(0,0,0)$ B. $(-1,0,0)$ C. $(0,1,0)$ D. $(0,0,-1)$
+
+    answer: C
+
+16. prompt: 定义集合 $M=\{x_0|x_0 \in R, X \in (-\infty, X_0), f(x) < f(x_0)\}$，在是的 $M=[-1,1]$ 的所有 $f(x)$ 中，下列成立的是？ A. $f(x)$ 是偶函数 B. $f(x)$ 在 $x=2$ 处取最大值 C. $f(x)$ 严格增 D. $f(x)$ 在 $x=-1$ 处取到极小值
+
+    answer: D
