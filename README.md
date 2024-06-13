@@ -3,9 +3,12 @@
 Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They were first downloaded as image format, then manually combined them 
 into a single pdf file. The pdf download option from the site has too much extra stuff.
 
-Unfortunately, currently the [pdf](data/2024/math/shanghai/exam_with_answer.pdf) file is manually converted to 
-[markdown](data/2024/math/shanghai/exam_with_answer_chinese.md). I have trie [marker](https://github.com/VikParuchuri/marker) but the results were 
+Unfortunately, currently the [pdf](data/2024_math_shanghai/exam_with_answer.pdf) file is manually converted to 
+[markdown](data/2024_math_shanghai/exam_with_answer.md). I have trie [marker](https://github.com/VikParuchuri/marker) but the results were 
 unusable.
+
+Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for 
+the models. This conversion removes all the `$$` for latex display as well as handles image tags. 
 
 ```python
 python llm_gaokao_test.py
@@ -44,3 +47,37 @@ k = 5x = 5 * 3 = 15
 
 因此，k 的值为 15。
 ```
+
+## Preliminary evaluation based on 2024 Shanghai Math using Yi-1.5-9B-Chat ([full response](response/2024_math_shanghai.txt))
+
+一、填空题
+1. ✅ +4/4
+2. ✅ +4/4
+3. ✅ +4/4
+4. ✅ +4/4
+5. ✅ +4/4
+6. ✅ +4/4
+7. ✅ +5/5
+8. ✅ +5/5
+9. ✅ +5/5
+10. ❌ +0/5
+11. Skipped
+12. ❌ +0/5
+二、选择题
+13. ✅ +4/4
+14. ✅ +4/4
+15. ❌ +0/5
+16. ❌ +0/5
+三、解答题
+17. Skipped
+18. (1)❌ (2)❌ +0/14
+19. Skipped
+20. (1)❌ (2)❌ (3)❌ +0/18
+21. (1)❌ (2)❌ +0/12
+
+    __总分.__  47/111
+
+## TODO: 
+- [] figure out how to automate grading if not considering partial credict
+- [] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models, including vision-language models for a full 150/150 grading.
+- [] maybe translate into english and try again to avoid confusion/potential bugs in between `,` and `，`/ `()` and `（）`/etc. As well as spacing between chinese and english/equations. See [notes](notes.md) for more details on testing with different prompt styles.
