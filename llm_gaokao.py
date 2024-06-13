@@ -1,15 +1,15 @@
 import csv
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "01-ai/Yi-1.5-9B-Chat"
-tokenizer = AutoTokenizer.from_pretrained("01-ai/Yi-1.5-9B-Chat", use_fast=False)
-model = AutoModelForCausalLM.from_pretrained("01-ai/Yi-1.5-9B-Chat", device_map="auto", torch_dtype='auto').eval()
+model_name = "Qwen/Qwen2-7B-Instruct"
+tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype='auto').eval()
 
 with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
-    with open("response/Yi-1.5-9B-Chat-2024_math_shanghai.txt", "w") as output_file:
+    with open(f"response/{model_name.split('/')[1]}-2024_math_shanghai.txt", "w") as output_file:
         for i, row in enumerate(csv_reader):
             prompt = row[0]
             answer = row[1]
