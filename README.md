@@ -72,10 +72,10 @@ k = 5x = 5 * 3 = 15
 17. Skipped
 18. (1)❌ (2)❌ +0/14
 19. Skipped
-20. (1)❌ (2)❌ (3)❌ +0/18
+20. (1)✅ (2)❌ (3)❌ +6/18
 21. (1)❌ (2)❌ +0/12
 
-    __总分.__  47/111
+    __总分.__  53/111
 
 ## TODO: 
 - [] figure out how to automate grading if not considering partial credict
