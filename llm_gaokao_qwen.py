@@ -2,8 +2,8 @@ import csv, torch, argparse
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
-parser.add_argument("--model_name", default="Qwen/Qwen2-7B-Instruct", type=str, required=True, help="Name of the model to use.")
-parser.add_argument("--max_length", default=4096, type=int, required=True, help="Maximum length for the generated response.")
+parser.add_argument("--model_name", default="Qwen/Qwen2-7B-Instruct", type=str, required=False, help="Name of the model to use.")
+parser.add_argument("--max_length", default=4096, type=int, required=False, help="Maximum length for the generated response.")
 args = parser.parse_args()
 
 model_name = args.model_name

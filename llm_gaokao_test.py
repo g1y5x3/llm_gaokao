@@ -6,7 +6,7 @@ tokenizer = AutoTokenizer.from_pretrained("01-ai/Yi-1.5-9B-Chat", use_fast=False
 model = AutoModelForCausalLM.from_pretrained("01-ai/Yi-1.5-9B-Chat", device_map="auto", torch_dtype='auto').eval()
 
 messages = [
-    {"role": "user",   "content": "已知抛物线 $y^2=4x$ 上有一点 $P$ 到准线的距离为 9， 那么 $P$ 到 $x$ 轴的距离为？"},
+    {"role": "user",   "content": "已知 $f(x) = \begin{cases}\sqrt{x}, x > 0 \\1, x \leq 0\end{cases}$，$f(3)=$"},
 ]
 
 input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
