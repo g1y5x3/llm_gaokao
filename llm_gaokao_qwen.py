@@ -1,7 +1,13 @@
-import csv, torch
+import csv, torch, argparse
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "Qwen/Qwen2-7B-Instruct"
+parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
+parser.add_argument("--model_name", default="Qwen/Qwen2-7B-Instruct", type=str, required=True, help="Name of the model to use.")
+parser.add_argument("--max_length", default=4096, type=int, required=True, help="Maximum length for the generated response.")
+args = parser.parse_args()
+
+model_name = args.model_name
+max_length = args.max_length
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.bfloat16).eval()
@@ -20,7 +26,7 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             ]
 
             input_ids = tokenizer.apply_chat_template(conversation=messages, add_generation_prompt=True, return_tensors='pt')
-            output_ids = model.generate(input_ids.to('cuda'), max_length=4096)
+            output_ids = model.generate(input_ids.to('cuda'), max_length=max_length)
             response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
 
             print(f"#### {i+1}")
