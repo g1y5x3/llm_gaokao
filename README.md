@@ -8,7 +8,7 @@ Unfortunately, currently the [pdf](data/2024_math_shanghai/exam_with_answer.pdf)
 [marker](https://github.com/VikParuchuri/marker) to hopefully speed-up the process but the results were not usable.
 
 Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for 
-the models. This conversion removes all the `$$` for latex display as well as handles image tags. 
+the models.
 
 ```python
 python llm_gaokao_test.py
@@ -71,14 +71,16 @@ Answer:
 ## Preliminary evaluation based on 2024 Shanghai Math
 Graded by hand, no partical credits. Skipped the questions that involve graph. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
 
-| id (points)                                                                           | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14) | 18 (14) | 19 (14) | 20 (18)   | 21 (18) | total (150) |
-| ------------------------------------------------------------------------------------- |-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|---------|---------|---------|-----------|---------|-------------|
-| [Yi-1.5-34B-Chat](response/Yi-1.5-34B-Chat-2024_math_shanghai.md)                     | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped | 62/99 |
-| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                 | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped | 60/99 |
-| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                       | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 53/99 |
-| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)        | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 36/99 |
-| [deepseek-math-7b-instruct](response/deepseek-math-7b-instruct-2024_math_shanghai.md) | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ✅ | Skipped | 31/99 |
-| [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)   | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ❌ | Skipped | 24/99 |
+| id (points)                                                                          | total (150) | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14) | 18 (14) | 19 (14) | 20 (18)   | 21 (18) |
+| -------------------------------------------------------------------------------------|-------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|---------|---------|---------|-----------|---------|
+| [Yi-1.5-34B-Chat](response/Yi-1.5-34B-Chat-2024_math_shanghai.md)                    |62/99        | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
+| [GPT-4o](response/GPT-4o-2024_math_shanghai.md)                                      |61/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ❌     | ✅     | ❌     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
+| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                |60/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
+| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                      |53/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
+| [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                      |49/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ❌     | Skipped | ✅ ❌   | Skipped | ❌ ❌ ❌ | Skipped |
+| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       |36/99        | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
+| [deepseek-math-7b-instruct](response/deepseek-math-7b-instruct-2024_math_shanghai.md)|31/99        | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ✅ | Skipped |
+| [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)  |24/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ❌ | Skipped |
 
 ## TODO: 
 - [] figure out how to automate grading if not considering partial credict
