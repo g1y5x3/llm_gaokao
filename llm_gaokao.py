@@ -1,7 +1,7 @@
 import csv
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "01-ai/Yi-1.5-9B-Chat"
+model_name = "Qwen/Qwen2-7B-Instruct"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype='auto').eval()
@@ -23,12 +23,12 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_length=4096)
             response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
 
-            print(f"####{i+1}")
+            print(f"#### {i+1}")
             print(f"Prompt: {prompt}\n")
             print(f"Response:\n{response}\n")
             print(f"Answer: {answer}\n")
 
-            output_file.write(f"####{i+1}\n")
-            output_file.write(f"Prompt: {prompt}\n")
-            output_file.write(f"Response:\n{response}\n")
+            output_file.write(f"#### {i+1}\n")
+            output_file.write(f"Prompt: {prompt}\n\n")
+            output_file.write(f"Response:\n\n{response}\n\n")
             output_file.write(f"Answer:{answer}\n\n")

@@ -48,36 +48,33 @@ k = 5x = 5 * 3 = 15
 因此，k 的值为 15。
 ```
 
-## Preliminary evaluation based on 2024 Shanghai Math using Yi-1.5-9B-Chat ([full response](response/Yi-1.5-9B-Chat-2024_math_shanghai.txt))
+## Preliminary evaluation based on 2024 Shanghai Math
 
-一、填空题
-1. ✅ +4/4
-2. ✅ +4/4
-3. ✅ +4/4
-4. ✅ +4/4
-5. ✅ +4/4
-6. ✅ +4/4
-7. ✅ +5/5
-8. ✅ +5/5
-9. ✅ +5/5
-10. ❌ +0/5
-11. Skipped
-12. ❌ +0/5
+| id (points) |[Llama-3<br>8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)| Yi-1.5<br>9B-Chat | Qwen2-7B-Instruct |
+|-------------|-------------|-------------------|-------------------|
+| 1 (4)       | ✔           | ✅                |                   |
+| 2 (4)       | ✔           | ✅                |                   |
+| 3 (4)       | ✔           | ✅                |                   |
+| 4 (4)       | ✔           | ✅                |                   |
+| 5 (4)       | ✔           | ✅                |                   |
+| 6 (4)       | X           | ✅                |                   |
+| 7 (5)       | X           | ✅                |                   |
+| 8 (5)       | X           | ✅                |                   |
+| 9 (5)       | X           | ❌                |                   |
+| 10 (5)      | X           | ❌                |                   |
+| 11 (5)      | s           | Skipped           |                   |
+| 12 (5)      | X           | ❌                |                   |
+| 13 (4)      | ✔           | ✅                |                   |
+| 14 (4)      | X           | ✅                |                   |
+| 15 (5)      | X           | ❌                |                   |
+| 16 (5)      | X           | ✅                |                   |
+| 17 (14)     | s           | Skipped           |                   |
+| 18 (14)     | 1.X 2.X     | 1.❌ 2.❌         |                   |
+| 19 (14)     | s           | Skipped           |                   |
+| 20 (18)     | 1.X 2.X 3.X | 1.❌ 2.✅ 3.❌    |                    |
+| 21 (18)     | s           | Skipped   	       |                   |
+| total (150) | 24/99       | 53/99             |                   |
 
-二、选择题
-13. ✅ +4/4
-14. ✅ +4/4
-15. ❌ +0/5
-16. ❌ +0/5
-
-三、解答题
-17. Skipped
-18. (1)❌ (2)❌ +0/14
-19. Skipped
-20. (1)✅ (2)❌ (3)❌ +6/18
-21. (1)❌ (2)❌ +0/12
-
-    __总分.__  53/111
 
 ## TODO: 
 - [] figure out how to automate grading if not considering partial credict
