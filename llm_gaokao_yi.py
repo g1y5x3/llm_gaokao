@@ -1,10 +1,10 @@
-import csv
+import csv, torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "Qwen/Qwen2-7B-Instruct"
+model_name = "01-ai/Yi-1.5-9B-Chat"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
-model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype='auto').eval()
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.bfloat16).eval()
 
 with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
@@ -16,14 +16,10 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             answer = row[1]
 
             messages = [
-                {"role": "user",   "content": prompt},
+                {"role": "user",   "content": prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。"}
             ]
 
-            # # llama-3
-            # input_ids = tokenizer.apply_chat_template(conversation=messages, add_generation_prompt=True, return_tensors='pt')
-            # terminators = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
-            # output_ids = model.generate(input_ids.to('cuda'), eos_token_id=terminators, pad_token_id=tokenizer.eos_token_id,  max_length=4096)
-            input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, add_generation_prompt=True, return_tensors='pt')
+            input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
             output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_length=4096)
             response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
 

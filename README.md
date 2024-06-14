@@ -49,11 +49,12 @@ k = 5x = 5 * 3 = 15
 ```
 
 ## Preliminary evaluation based on 2024 Shanghai Math
-| id (points)                                                                       | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14) | 18 (14) | 19 (14) | 20 (18)   | 21 (18) | total (150) |
-|-------------                                                                      |-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|---------|---------|---------|---------  |---------|-------------|
-| [Llama-3<br>8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 36/99 |
-| [Yi-1.5<br>9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ❌ ✅ ❌ | Skipped | 53/99 |
-| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)             | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 48/99 |
+| id (points)                                                                          | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14) | 18 (14) | 19 (14) | 20 (18)   | 21 (18) | total (150) |
+|-------------                                                                         |-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|---------|---------|---------|---------  |---------|-------------|
+| [Llama-3<br>8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 36/99 |
+| [Yi-1.5<br>9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                   | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ❌ ✅ ❌ | Skipped | 53/99 |
+| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 48/99 |
+| [deepseek-math-7b-instruct](response/deepseek-math-7b-instruct-2024_math_shanghai.md)| ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ✅ | Skipped | 31/99 |
 
 ## TODO: 
 - [] figure out how to automate grading if not considering partial credict
