@@ -3,8 +3,12 @@ import os, csv
 
 model_name = "google/gemini-1.5-pro"
 genai.configure(api_key=os.environ["API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel(model_name.split('/')[1])
 
+generation_config = genai.GenerationConfig(
+    temperature=0.0,
+    max_output_tokens=4096
+)
 
 with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
@@ -15,7 +19,8 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             prompt = row[0]
             answer = row[1]
 
-            response = model.generate_content(prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。")
+            response = model.generate_content(prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。",
+                                              generation_config=generation_config)
 
             print(f"#### {i+1}")
             print(f"Prompt: {prompt}\n")

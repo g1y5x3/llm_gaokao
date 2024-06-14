@@ -18,7 +18,9 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
               model="gpt-4o",
               messages=[
                 {"role": "user", "content": prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。"}
-              ]
+              ],
+              temperature=0.0,
+              max_tokens=4096
             )
             
             response = completion.choices[0].message.content
