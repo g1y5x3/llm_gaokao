@@ -3,7 +3,7 @@ import csv
 
 client = OpenAI()
 
-model_name = "openai/GPT-4o"
+model_name = "openai/gpt-4o"
 
 with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
@@ -15,12 +15,12 @@ with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
             answer = row[1]
 
             completion = client.chat.completions.create(
-              model="gpt-4o",
+              model=model_name.split('/')[1],
               messages=[
                 {"role": "user", "content": prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。"}
               ],
-              temperature=0.0,
-              max_tokens=4096
+              max_tokens=4096,
+              temperature=0.0
             )
             
             response = completion.choices[0].message.content
