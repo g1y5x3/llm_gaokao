@@ -1,7 +1,7 @@
 import csv, torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "01-ai/Yi-1.5-9B-Chat"
+model_name = "01-ai/Yi-1.5-34B-Chat"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto").eval()

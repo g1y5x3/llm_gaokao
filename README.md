@@ -4,8 +4,8 @@ Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They 
 single pdf file. The pdf download option from the site has too much extra stuff.
 
 Unfortunately, currently the [pdf](data/2024_math_shanghai/exam_with_answer.pdf) file is manually converted to 
-[markdown](data/2024_math_shanghai/exam_with_answer.md) (github doesn't render it well but vscode does). I have trie 
-[marker](https://github.com/VikParuchuri/marker) to speed-up the process but the results were not usable.
+[markdown](data/2024_math_shanghai/exam_with_answer.md) (github doesn't render it well but vscode does). I have tried
+[marker](https://github.com/VikParuchuri/marker) to hopefully speed-up the process but the results were not usable.
 
 Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for 
 the models. This conversion removes all the `$$` for latex display as well as handles image tags. 
@@ -69,15 +69,17 @@ Answer:
 ```
 
 ## Preliminary evaluation based on 2024 Shanghai Math
+Graded by hand, no partical credits. Skipped the questions that involve graph. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
+
 | id (points)                                                                           | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14) | 18 (14) | 19 (14) | 20 (18)   | 21 (18) | total (150) |
 | ------------------------------------------------------------------------------------- |-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|---------|---------|---------|-----------|---------|-------------|
 | [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                 | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped | 60/99 |
-| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 53/99 |
-| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)     | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 36/99 |
+| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                       | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 53/99 |
+| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)        | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped | 36/99 |
 | [deepseek-math-7b-instruct](response/deepseek-math-7b-instruct-2024_math_shanghai.md) | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ✅ | Skipped | 31/99 |
 | [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)   | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped | ❌ ❌   | Skipped | ❌ ❌ ❌ | Skipped | 24/99 |
 
 ## TODO: 
 - [] figure out how to automate grading if not considering partial credict
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models, including vision-language models for ~~a full 150/150 grading~~ grade the last question is kinda hard.
-- [] maybe translate into english and try again to avoid confusion/potential bugs in between `,` and `，`/ `()` and `（）`/etc. As well as spacing between chinese and english/equations. See [notes](notes.md) for more details on testing with different prompt styles.
+- [] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.
