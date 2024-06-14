@@ -4,7 +4,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 model_name = "01-ai/Yi-1.5-9B-Chat"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.bfloat16).eval()
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto").eval()
 
 with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
