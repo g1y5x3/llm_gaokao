@@ -45,10 +45,11 @@ Graded by hand, no partical credits. Skipped the questions that involve graph. A
 | [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                 |60/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped  | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
 | [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                       |60/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ❌     | Skipped  | ✅ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
 | [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                       |53/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
+| [deepseek-chat](response/deepseek-chat-2024_math_shanghai.md)                         |44/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
 | [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)        |36/99        | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
 | [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)   |24/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped  | ❌ ❌   | Skipped | ❌ ❌ ❌ | Skipped |
 
-* deepseek-coder and Qwen2-72B-Instruct was able to correctly answer 17.1 without the image. Very impressive.
+* __deepseek-coder__ and __Qwen2-72B-Instruct__ was able to correctly answer 17.1 without the image. Very impressive.
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
