@@ -31,25 +31,26 @@ Response:
 ```
 
 ## Preliminary evaluation based on [2024 Shanghai Math](data/2024_math_shanghai/exam.pdf)
-All model generation were configured with `temperature = 0, max_length = 4096`
+All model generation were configured with `temperature = 0`, and `max_length = 4096`
 
-Graded by hand, no partical credits. Skipped the questions that involve graph. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
+Graded by hand, no partial credits. Skipped the questions that involve image/graph/table understanding. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
 
-| id (points)                                                                           | total (150) | 1 (4) | 2 (4) | 3 (4) | 4 (4) | 5 (4) | 6 (4) | 7 (5) | 8 (5) | 9 (5) | 10 (5) | 11 (5) | 12 (5) | 13 (4) | 14 (4) | 15 (5) | 16 (5) | 17 (14)  | 18 (14) | 19 (14) | 20 (18)   | 21 (18) |
-| ------------------------------------------------------------------------------------- |-------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|----------|---------|---------|-----------|---------|
-| [deepseek-coder](response/deepseek-coder-2024_math_shanghai.md)                       |82/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ✅    | ✅     | ✅     | ✅     | ✅     | Skipped* | ✅ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Qwen2-72B-Instruct](response/Qwen2-72B-Instruct-2024_math_shanghai.md)               |70/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ✅     | Skipped* | ✅ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [yi-large](response/yi-large-2024_math_shanghai.md)                                   |66/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ❌     | Skipped  | ❌ ✅   | Skipped | ✅ ✅ ❌ | Skipped |
-| [gpt-4o](response/gpt-4o-2024_math_shanghai.md)                                       |63/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Yi-1.5-34B-Chat](response/Yi-1.5-34B-Chat-2024_math_shanghai.md)                     |62/99        | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ✅     | ✅     | Skipped  | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                 |60/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped  | ❌ ✅   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                       |60/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ❌     | Skipped  | ✅ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                       |53/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | Skipped | ❌    | ✅     | ✅     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [deepseek-chat](response/deepseek-chat-2024_math_shanghai.md)                         |44/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)        |36/99        | ✅    | ✅    | ❌    | ✅    | ✅    | ❌    | ❌    | ✅    | ❌    | ❌    | Skipped | ❌    | ✅     | ❌     | ❌     | ✅     | Skipped  | ❌ ❌   | Skipped | ✅ ❌ ❌ | Skipped |
-| [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)   |24/99        | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ❌    | ❌    | ❌    | ❌    | Skipped | ❌    | ❌     | ❌     | ❌     | ❌     | Skipped  | ❌ ❌   | Skipped | ❌ ❌ ❌ | Skipped |
+| model                                                                                | score |
+|--------------------------------------------------------------------------------------|-------|
+| [deepseek-coder](response/deepseek-coder-2024_math_shanghai.md)                      | 82/99 |
+| [Qwen2-72B-Instruct](response/Qwen2-72B-Instruct-2024_math_shanghai.md)              | 70/99 |
+| [yi-large](response/yi-large-2024_math_shanghai.md)                                  | 66/99 |
+| [gpt-4o](response/gpt-4o-2024_math_shanghai.md)                                      | 63/99 |
+| [Yi-1.5-34B-Chat](response/Yi-1.5-34B-Chat-2024_math_shanghai.md)                    | 62/99 |
+| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                | 60/99 |
+| [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                      | 60/99 |
+| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                      | 53/99 |
+| [deepseek-chat(v2)](response/deepseek-chat-2024_math_shanghai.md)                    | 44/99 |
+| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       | 36/99 |
+| [deepseek-math-7b-instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | 31/99 |
+| [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)  | 24/99 |
 
-* __deepseek-coder__ and __Qwen2-72B-Instruct__ was able to correctly answer 17.1 without the image. Very impressive.
+_itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
