@@ -50,11 +50,12 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 | [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       | 36/99 |
 | [deepseek-math-7b-instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | 31/99 |
 
-<!-- _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_ -->
-![grades sheet](figures/grades_details.png)
+_itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
+<!-- ![grades sheet](figures/grades_details.png) -->
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
-- [] make the response generation as deterministic as possible for reproducibility.
-- [] enable 150/150 generation and evaluation.
-- [] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.
+- [x] make the response generation as deterministic as possible for reproducibility.
+- [ ] add the rest of math exams
+- [ ] enable 150/150 generation and evaluation.
+- [ ] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.

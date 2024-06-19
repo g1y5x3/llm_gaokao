@@ -1,7 +1,8 @@
-import re
-import csv
+import re, csv
 
-with open("data/2024_math_shanghai/exam_with_answer.md", "r") as f:
+exam = "national1"
+
+with open(f"data/2024_math_{exam}/exam_with_answer.md", "r") as f:
     markdown_text = f.read()
 
 prompt_pattern = r'prompt: (.*?)\n'
@@ -11,7 +12,7 @@ image_tag_pattern = re.compile(r'<img[^>]*></img>')
 prompts = re.findall(prompt_pattern, markdown_text, re.DOTALL)
 answers = re.findall(answer_pattern, markdown_text, re.DOTALL)
 
-output_file = "data/2024_math_shanghai/exam_with_answer.csv"
+output_file = f"data/2024_math_{exam}/exam_with_answer.csv"
 with open(output_file, 'w', newline='') as file:
     writer = csv.writer(file, quoting=csv.QUOTE_ALL)
     writer.writerow(['prompt', 'answer'])
