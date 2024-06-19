@@ -30,28 +30,27 @@ Response:
 因此，$f(3)$ 的值是 $\sqrt{3}$。
 ```
 
-## Preliminary evaluation based on [2024 Shanghai Math](data/2024_math_shanghai/exam.pdf)
+## Evaluation based on [2024 Shanghai Math](data/2024_math_shanghai/exam.pdf) and [2024 National1 Math](data/2024_math_national1/exam_with_answer.pdf)
 All model generation were configured with `temperature = 0`, and `max_length = 4096`
 
 Graded by hand, no partial credits. Skipped the questions that involve image/graph/table understanding. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
 
-| model                                                                                | score |
-|--------------------------------------------------------------------------------------|-------|
-| [deepseek-coder](response/deepseek-coder-2024_math_shanghai.md)                      | 82/99 |
-| [Qwen2-72B-Instruct](response/Qwen2-72B-Instruct-2024_math_shanghai.md)              | 70/99 |
-| [yi-large](response/yi-large-2024_math_shanghai.md)                                  | 66/99 |
-| [gpt-4o](response/gpt-4o-2024_math_shanghai.md)                                      | 63/99 |
-| [Yi-1.5-34B-Chat](response/Yi-1.5-34B-Chat-2024_math_shanghai.md)                    | 62/99 |
-| [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                | 60/99 |
-| [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                      | 60/99 |
-| [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                      | 53/99 |
-| [Llama-3-70B-Instruct](response/Meta-Llama-3-70B-Instruct-2024_math_shanghai.md)     | 49/99 |
-| [deepseek-chat(v2)](response/deepseek-chat-2024_math_shanghai.md)                    | 44/99 |
-| [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       | 36/99 |
-| [deepseek-math-7b-instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | 31/99 |
+| model                     | national1 | shanghai |
+|---------------------------|-----------|----------|
+| deepseek-coder            | 58/106    | 82/99    |
+| Qwen2-72B-Instruct        |           | 70/99    |
+| yi-large                  |           | 66/99    |
+| gpt-4o                    |           | 63/99    |
+| Yi-1.5-34B-Chat           |           | 62/99    |
+| Qwen2-7B-Instruct         |           | 60/99    |
+| Gemini-1.5-Pro            |           | 60/99    |
+| Yi-1.5-9B-Chat            |           | 53/99    |
+| Llama-3-70B-Instruct      |           | 49/99    |
+| deepseek-chat(v2)         |           | 44/99    |
+| Llama-3-8B-Instruct       |           | 36/99    |
+| deepseek-math-7b-instruct |           | 31/99    |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
-<!-- ![grades sheet](figures/grades_details.png) -->
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.

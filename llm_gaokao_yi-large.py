@@ -1,7 +1,7 @@
 import os, csv
 from openai import OpenAI
 
-model_name = "01-ai/yi-large-preview"
+model_name = "01-ai/yi-large"
 
 client = OpenAI(
     api_key=os.environ["YI_API_KEY"],

@@ -2,17 +2,18 @@ import os, csv
 from openai import OpenAI
 
 model_name = "deepseek/deepseek-coder"
+exam = "national1"
 
 client = OpenAI(
     api_key=os.environ["DEEPSEEK_API_KEY"],
     base_url="https://api.deepseek.com"
 )
 
-with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
+with open(f"data/2024_math_{exam}/exam_with_answer.csv", "r") as input_file:
 	csv_reader = csv.reader(input_file)
 	next(csv_reader)
 
-	with open(f"response/{model_name.split('/')[1]}-2024_math_shanghai.md", "w") as output_file:
+	with open(f"response/{model_name.split('/')[1]}-2024_math_{exam}.md", "w") as output_file:
 		for i, row in enumerate(csv_reader):
 			prompt = row[0]
 			answer = row[1]

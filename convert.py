@@ -10,7 +10,9 @@ answer_pattern = r'answer: (.*?)\n'
 image_tag_pattern = re.compile(r'<img[^>]*></img>')
 
 prompts = re.findall(prompt_pattern, markdown_text, re.DOTALL)
+print(len(prompts))
 answers = re.findall(answer_pattern, markdown_text, re.DOTALL)
+print(len(answers))
 
 output_file = f"data/2024_math_{exam}/exam_with_answer.csv"
 with open(output_file, 'w', newline='') as file:
