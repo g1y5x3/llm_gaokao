@@ -45,10 +45,10 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 | [Qwen2-7B-Instruct](response/Qwen2-7B-Instruct-2024_math_shanghai.md)                | 60/99 |
 | [Gemini-1.5-Pro](response/gemini-1.5-pro-2024_math_shanghai.md)                      | 60/99 |
 | [Yi-1.5-9B-Chat](response/Yi-1.5-9B-Chat-2024_math_shanghai.md)                      | 53/99 |
+| [Llama-3-70B-Instruct](response/Meta-Llama-3-70B-Instruct-2024_math_shanghai.md)     | 49/99 |
 | [deepseek-chat(v2)](response/deepseek-chat-2024_math_shanghai.md)                    | 44/99 |
 | [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       | 36/99 |
 | [deepseek-math-7b-instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | 31/99 |
-| [Mistral-7B-Instruct-v0.3](response/Mistral-7B-Instruct-v0.3-2024_math_shanghai.md)  | 24/99 |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
