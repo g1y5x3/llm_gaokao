@@ -3,16 +3,18 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
 parser.add_argument("--model_name", default="01-ai/Yi-1.5-9B-Chat", type=str, required=False, help="Name of the model to use.")
+parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
 parser.add_argument("--max_length", default=4096, type=int, required=False, help="Maximum length for the generated response.")
 args = parser.parse_args()
 
 model_name = args.model_name
+exam       = args.exam
 max_length = args.max_length
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto").eval()
 
-with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
+with open(f"data/2024_math_{exam}/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
