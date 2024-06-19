@@ -3,13 +3,13 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
 parser.add_argument("--model_name", default="01-ai/Yi-1.5-9B-Chat", type=str, required=False, help="Name of the model to use.")
-parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
 parser.add_argument("--max_length", default=4096, type=int, required=False, help="Maximum length for the generated response.")
+parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
 args = parser.parse_args()
 
 model_name = args.model_name
-exam       = args.exam
 max_length = args.max_length
+exam       = args.exam
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto").eval()
