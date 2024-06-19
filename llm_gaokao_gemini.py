@@ -1,20 +1,29 @@
 import google.generativeai as genai
-import os, csv
+import os, csv, argparse
 
-model_name = "google/gemini-1.5-pro"
-genai.configure(api_key=os.environ["API_KEY"])
+parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
+parser.add_argument("--model_name", default="google/gemini-1.5-pro", type=str, required=False, help="Name of the model to use.")
+parser.add_argument("--max_length", default=4096, type=int, required=False, help="Maximum length for the generated response.")
+parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
+args = parser.parse_args()
+
+model_name = args.model_name
+exam       = args.exam
+max_length = args.max_length
+
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel(model_name.split('/')[1])
 
 generation_config = genai.GenerationConfig(
     temperature=0.0,
-    max_output_tokens=4096
+    max_output_tokens=max_length
 )
 
-with open("data/2024_math_shanghai/exam_with_answer.csv", "r") as input_file:
+with open(f"data/2024_math_{exam}/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
-    with open(f"response/{model_name.split('/')[1]}-2024_math_shanghai.md", "w") as output_file:
+    with open(f"response/{model_name.split('/')[1]}-2024_math_{exam}.md", "w") as output_file:
         for i, row in enumerate(csv_reader):
             prompt = row[0]
             answer = row[1]
