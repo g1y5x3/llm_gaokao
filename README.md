@@ -50,7 +50,8 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 | [Llama-3-8B-Instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md)       | 36/99 |
 | [deepseek-math-7b-instruct](response/Meta-Llama-3-8B-Instruct-2024_math_shanghai.md) | 31/99 |
 
-_itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
+<!-- _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_ -->
+![grades sheet](figures/grades_details.png)
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
