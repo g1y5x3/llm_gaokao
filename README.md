@@ -41,7 +41,6 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 | Gemini-1.5-Pro            | 46/106    | 60/99    |
 | deepseek-coder            | 58/106    | 82/99    |
 | deepseek-chat(v2)         | 24/106    | 44/99    |
-| deepseek-math-7b-instruct |           | 31/99    |
 | yi-large                  | 39/106    | 66/99    |
 | Yi-1.5-34B-Chat           | 41/106    | 62/99    |
 | Yi-1.5-9B-Chat            |           | 53/99    |
@@ -55,6 +54,7 @@ _itemization of grades can be found in this [spreadsheet](https://docs.google.co
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
 - [x] make the response generation as deterministic as possible for reproducibility.
+- [ ] a formatter to make sure all questions are given in the same prompt style.
 - [ ] add the rest of math exams
 - [ ] enable 150/150 generation and evaluation.
 - [ ] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.
