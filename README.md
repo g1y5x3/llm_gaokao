@@ -37,18 +37,18 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 
 | model                     | national1 | shanghai |
 |---------------------------|-----------|----------|
-| deepseek-coder            | 58/106    | 82/99    |
-| Qwen2-72B-Instruct        |           | 70/99    |
-| yi-large                  | 39/106    | 66/99    |
 | gpt-4o                    | 66/106    | 63/99    |
-| Yi-1.5-34B-Chat           |           | 62/99    |
-| Qwen2-7B-Instruct         |           | 60/99    |
 | Gemini-1.5-Pro            | 46/106    | 60/99    |
-| Yi-1.5-9B-Chat            |           | 53/99    |
-| Llama-3-70B-Instruct      |           | 49/99    |
+| deepseek-coder            | 58/106    | 82/99    |
 | deepseek-chat(v2)         |           | 44/99    |
-| Llama-3-8B-Instruct       |           | 36/99    |
 | deepseek-math-7b-instruct |           | 31/99    |
+| yi-large                  | 39/106    | 66/99    |
+| Yi-1.5-34B-Chat           | 41/106    | 62/99    |
+| Yi-1.5-9B-Chat            |           | 53/99    |
+| Qwen2-72B-Instruct        | 58/106    | 70/99    |
+| Qwen2-7B-Instruct         |           | 60/99    |
+| Llama-3-70B-Instruct      |           | 49/99    |
+| Llama-3-8B-Instruct       |           | 36/99    |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
