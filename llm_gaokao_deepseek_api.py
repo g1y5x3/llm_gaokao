@@ -1,8 +1,15 @@
-import os, csv
+import os, csv, argparse
 from openai import OpenAI
 
-model_name = "deepseek/deepseek-coder"
-exam = "national1"
+parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
+parser.add_argument("--model_name", default="deepseek/deepseek-coder", type=str, required=False, help="Name of the model to use.")
+parser.add_argument("--max_length", default=4096, type=int, required=False, help="Maximum length for the generated response.")
+parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
+args = parser.parse_args()
+
+model_name = args.model_name
+exam       = args.exam
+max_length = args.max_length
 
 client = OpenAI(
     api_key=os.environ["DEEPSEEK_API_KEY"],
@@ -22,7 +29,7 @@ with open(f"data/2024_math_{exam}/exam_with_answer.csv", "r") as input_file:
 				model=model_name.split('/')[1],
 				messages=[{"role": "user", "content": prompt + "\n请通过逐步推理来解答问题，并把最终答案放置于 \\boxed{}中。"}],
                 temperature=0.0,
-            	max_tokens=4096
+            	max_tokens=max_length
 			)
  
 			response = completion.choices[0].message.content

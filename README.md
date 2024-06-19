@@ -40,7 +40,7 @@ Graded by hand, no partial credits. Skipped the questions that involve image/gra
 | gpt-4o                    | 66/106    | 63/99    |
 | Gemini-1.5-Pro            | 46/106    | 60/99    |
 | deepseek-coder            | 58/106    | 82/99    |
-| deepseek-chat(v2)         |           | 44/99    |
+| deepseek-chat(v2)         | 24/106    | 44/99    |
 | deepseek-math-7b-instruct |           | 31/99    |
 | yi-large                  | 39/106    | 66/99    |
 | Yi-1.5-34B-Chat           | 41/106    | 62/99    |
