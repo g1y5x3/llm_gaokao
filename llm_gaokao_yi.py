@@ -18,7 +18,7 @@ with open(f"data/2024_math_{exam}/exam_with_answer.csv", "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
-    with open(f"response/{model_name.split('/')[1]}-2024_math_shanghai.md", "w") as output_file:
+    with open(f"response/{model_name.split('/')[1]}-2024_math_{exam}.md", "w") as output_file:
         for i, row in enumerate(csv_reader):
             prompt = row[0]
             answer = row[1]
