@@ -20,9 +20,19 @@ def format_equations_and_punctuation(text):
         '（': '(',
         '）': ')',
     }
-    
+
     for eng, chi in punctuation_map.items():
         text = text.replace(eng, chi)
+
+    multiple_choice_correction = {
+        'A。 ': 'A.',
+        'B。 ': 'B.', 
+        'C。 ': 'C.',
+        'D。 ': 'D.',
+    }
+
+    for bef, aft in multiple_choice_correction.items():
+        text = text.replace(bef, aft)
     
     return text
 
