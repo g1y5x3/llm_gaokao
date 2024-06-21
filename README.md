@@ -30,25 +30,24 @@ Response:
 因此，$f(3)$ 的值是 $\sqrt{3}$。
 ```
 
-## Evaluation based on [2024 Shanghai Math](data/2024_math_shanghai/exam.pdf) and [2024 National1 Math](data/2024_math_national1/exam_with_answer.pdf)
+## Evaluations graded by hand
 All model generation were configured with `temperature = 0`, and `max_length = 4096`
 
-Graded by hand, no partial credits. Skipped the questions that involve image/graph/table understanding. Also skip the last question since it's hard to find a simple criteria to judge the correctness of proof.
+No partial credits and questions that involve image/graph/table understanding as well as proof are skipped.
 
-| model                     | national1 | shanghai |
-|---------------------------|-----------|----------|
-| claude-3-5-sonnet         | 43/106    | 54/99    |
-| gpt-4o                    | 66/106    | 63/99    |
-| Gemini-1.5-Pro            | 46/106    | 60/99    |
-| deepseek-coder            | 58/106    | 82/99    |
-| deepseek-chat(v2)         | 24/106    | 44/99    |
-| yi-large                  | 39/106    | 66/99    |
-| Yi-1.5-34B-Chat           | 41/106    | 62/99    |
-| Yi-1.5-9B-Chat            | 26/106    | 53/99    |
-| Qwen2-72B-Instruct        | 58/106    | 70/99    |
-| Qwen2-7B-Instruct         | 48/106    | 60/99    |
-| Llama-3-70B-Instruct      |           | 49/99    |
-| Llama-3-8B-Instruct       |           | 36/99    |
+### questions are prompted in Chinese
+| model              | national1  | shanghai  |
+|--------------------|------------|-----------|
+| claude-3-5-sonnet  | __73/106__ | 54/99     |
+| gpt-4o             | 66/106     | 63/99     |
+| Gemini-1.5-Pro     | 46/106     | 60/99     |
+| deepseek-coder     | 58/106     | __82/99__ |
+| deepseek-chat      | 24/106     | 44/99     |
+| yi-large           | 39/106     | 66/99     |
+| Yi-1.5-34B-Chat    | 41/106     | 62/99     |
+| Yi-1.5-9B-Chat     | 26/106     | 53/99     |
+| Qwen2-72B-Instruct | 58/106     | 70/99     |
+| Qwen2-7B-Instruct  | 48/106     | 60/99     |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
