@@ -44,12 +44,12 @@ Unfortunately this is also the biggest pain point of evaluating these models due
 ### Prompted in Chinese
 | model              | national1  | shanghai  |
 |--------------------|------------|-----------|
-| claude-3-5-sonnet  |            |   59/99   |
-| deepseek-coder     |            | __71/99__ |
-| gpt-4o             |            |   70/99   |
-| Gemini-1.5-pro     |            |   65/99   |
-| Qwen2-72B-Instruct |            |   48/99   |
-| yi-large           |            |   48/99   |
+| claude-3-5-sonnet  |   62/106   |   59/99   |
+| deepseek-coder     | __63/106__ | __71/99__ |
+| gpt-4o             | __63/106__ |   70/99   |
+| Gemini-1.5-pro     |   42/106   |   65/99   |
+| Qwen2-72B-Instruct |   53/106   |   48/99   |
+| yi-large           |   45/106   |   48/99   |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
