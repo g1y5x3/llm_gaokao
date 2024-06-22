@@ -49,8 +49,6 @@ No partial credits and questions that involve image/graph/table understanding as
 | Qwen2-72B-Instruct | 58/106     | 70/99     |
 | Qwen2-7B-Instruct  | 48/106     | 60/99     |
 
-_itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
-
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
 - [x] make the response generation as deterministic as possible for reproducibility.
