@@ -44,15 +44,19 @@ Unfortunately this is also the biggest pain point of evaluating these models due
 ### Prompted in Chinese
 | model              | national1  | shanghai  |
 |--------------------|------------|-----------|
-| claude-3-5-sonnet  |            | 59/99     |
-| deepseek-coder     |            | __67/99__ |
+| claude-3-5-sonnet  |            |   59/99   |
+| deepseek-coder     |            | __71/99__ |
+| gpt-4o             |            |   70/99   |
+| Gemini-1.5-pro     |            |   65/99   |
+| Qwen2-72B-Instruct |            |   48/99   |
+| yi-large           |            |   48/99   |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
 - [x] make the response generation as deterministic as possible for reproducibility.
-- [ ] a formatter to make sure all questions are given in the same prompt style.
+- [x] manually format all questions.
 - [ ] add the rest of math exams
 - [ ] enable 150/150 generation and evaluation.
 - [ ] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.
