@@ -1,6 +1,10 @@
-import re, csv
+import re, csv, argparse
 
-exam = "national1"
+parser = argparse.ArgumentParser(description="Run a model on a CSV file and save the responses.")
+parser.add_argument("--exam", default="shanghai", type=str, required=False, help="Name of the exam for the model to take.")
+args = parser.parse_args()
+
+exam = args.exam
 
 with open(f"data/2024_math_{exam}/exam_with_answer.md", "r") as f:
     markdown_text = f.read()

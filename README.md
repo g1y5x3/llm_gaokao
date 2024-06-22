@@ -35,9 +35,13 @@ All model generation were configured with `temperature = 0`, and `max_length = 4
 
 No partial credits and questions that involve image/graph/table understanding as well as proof are skipped.
 
-INVESTIGATING HOW ROBUST THE LLMS ARE TO QUESTION FORMATTING
+### Formatting rules 
+All of the rules were based purely on observations. They are experimental and could lead to a pretty big variation in terms of model responses. 
+Unfortunately this is also the biggest pain point of evaluating these models due to being closely related to BPE.
+1. Insert ` ` before and after `$` for equations and numbers.
+2. Use language specific punctuation characters - `，。？` for Chinese and `,.?` for English except within the equations.  
 
-### questions are prompted in Chinese
+### Prompted in Chinese
 | model              | national1  | shanghai  |
 |--------------------|------------|-----------|
 | claude-3-5-sonnet  |            | 59/99     |
