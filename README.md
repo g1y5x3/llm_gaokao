@@ -25,36 +25,36 @@ messages = [
 
 因此，$f(3)$ 的值是 $\sqrt{3}$。
 ```
+## Question Formatting rules 
+All of the rules were based purely on observations. They are experimental and could lead to a pretty big variation in terms of model responses. 
+Unfortunately this is also the biggest pain point of evaluating these models due to being closely related to BPE.
+1. Insert ` ` before and after `$` for equations and numbers.
+2. Use language specific punctuation characters - `，。？` for Chinese and `,.?` for English except within the equations.  
+
+### TODO: add some examples to illustrate this problem 
 
 ## Evaluations (graded by hand)
 All model generation were configured with `temperature = 0`, and `max_length = 4096`
 
 No partial credits and questions that involve image/graph/table understanding as well as proof are skipped.
 
-### Formatting rules 
-All of the rules were based purely on observations. They are experimental and could lead to a pretty big variation in terms of model responses. 
-Unfortunately this is also the biggest pain point of evaluating these models due to being closely related to BPE.
-1. Insert ` ` before and after `$` for equations and numbers.
-2. Use language specific punctuation characters - `，。？` for Chinese and `,.?` for English except within the equations.  
-
-#### TODO: add some examples to illustrate this problem 
-
 ### Prompted in Chinese
-| model              | national1  | shanghai  |
-|--------------------|------------|-----------|
-| claude-3-5-sonnet  |   62/106   |   59/99   |
-| deepseek-coder     | __63/106__ |   71/99   |
-| gpt-4o             | __63/106__ |   70/99   |
-| Gemini-1.5-pro     |   42/106   |   65/99   |
-| Qwen2-72B-Instruct |   53/106   | __72/99__ |
-| yi-large           |   45/106   |   48/99   |
+| model              | national1  | national2  | shanghai  |
+|--------------------|------------|------------|-----------|
+| claude-3-5-sonnet  |   62/106   |   65/118   |   59/99   |
+| deepseek-coder     | __63/106__ | __91/118__ |   71/99   |
+| gpt-4o             | __63/106__ |   65/118   |   70/99   |
+| Gemini-1.5-pro     |   42/106   |            |   65/99   |
+| Qwen2-72B-Instruct |   53/106   |            | __72/99__ |
+| yi-large           |   45/106   |            |   48/99   |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
 ## TODO: 
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
 - [x] make the response generation as deterministic as possible for reproducibility.
-- [x] manually format all questions.
-- [ ] add the rest of math exams
+- [x] manually format all questions (actually the format is almost automated through better prompting claude 3.5 to extract the texts).
+- [ ] add the rest of math exam
+- [ ] automate the benchmark scoring.
 - [ ] enable 150/150 generation and evaluation.
 - [ ] Optimize the prompt. The answers could be very sensitive to the prompts. See [notes](notes.md) for more details on testing with different prompt styles.
