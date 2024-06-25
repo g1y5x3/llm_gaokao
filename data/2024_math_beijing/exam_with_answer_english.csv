@@ -1,0 +1,86 @@
+"prompt","answer"
+"Given sets $M = \{x| -4 < x ≤ 1 \}$ and $N = \{x| -1 < x < 3 \}$, then $M \cup N =$ _____?
+A. ${x|-4 < x < 3}$
+B. ${x|-1 < x \leq 1}$
+C. ${0,1,2}$
+D. ${x|-1 < x < 4}$","A"
+"Given $\frac{Z}{i} = i - 1$, what is $Z =$ _____?
+A. $1-i$
+B. $-i$
+C. $-1-i$
+D. $i$","C"
+"What is the distance from the center of the circle $x^2 + y^2 - 2x + 6y = 0$ to the line $x - y + 2 = 0$ _____?
+A. $2\sqrt{3}$
+B. $2$
+C. $3\sqrt{2}$
+D. $\sqrt{6}$","C"
+"What is the coefficient of $x^3$ in the binomial expansion of $(x - \sqrt{x})^4$?
+A. 15
+B. 6
+C. -4
+D. -13","B"
+"Given vectors $a$ and $b$, then ""$(a + b)(a - b) = 0$"" is a _____ condition for ""$a = b$ or $a = -b$"".
+A. Necessary but not sufficient condition
+B. Sufficient but not necessary condition
+C. Necessary and sufficient condition
+D. Neither sufficient nor necessary condition","A"
+"Given $f(x) = sin \omega x$, $f(x_1) = -1$, $f(x_2) = 1$, $|x_1 - x_2|_{min} = \frac{\pi}{2}$, then $\omega =$ _____?
+A. 1
+B. 2
+C. 3
+D. 4","B"
+"The water quality is recorded as $d = \frac{S-1}{ln n}$, and the larger $d$ is, the better the water quality. If $S$ remains constant, and $d_1 = 2.1$, $d_2 = 2.2$, then what is the relationship between $n_1$ and $n_2$?
+A. $n_1 < n_2$
+B. $n_1 > n_2$
+C. If $S < 1$, then $n_1 < n_2$; if $S > 1$, then $n_1 > n_2$;
+D. If $S < 1$, then $n_1 > n_2$; if $S > 1$, then $n_1 < n_2$;","C"
+"Given a square pyramid with a base side length of 4, and four lateral edges of lengths $4,4,2\sqrt{2},2\sqrt{2}$, what is the height of this pyramid?
+A. $\frac{\sqrt{2}}{2}$
+B. $\frac{\sqrt{3}}{2}$
+C. $2\sqrt{3}$
+D. $\sqrt{3}$","D"
+"Given that $(x_1,y_1)$ and $(x_2,y_2)$ are points on the curve $y=2^x$, which of the following is correct:
+A. $\log_2 \frac{y_1+y_2}{2} > \frac{x_1+x_2}{2}$
+B. $\log_2 \frac{y_1+y_2}{2} < \frac{x_1+x_2}{2}$
+C. $\log_2 \frac{y_1+y_2}{2} > x_1+x_2$
+D. $\log_2 \frac{y_1+y_2}{2} < x_1+x_2$","A"
+"If the set $\{ y|y=x+t(x^2-x), 0≤t≤1, 1≤x≤2 \}$ represents a graph, where the maximum distance between two points is $d$, and the area is $S$, then:
+A. $d=3, S<1$
+B. $d=3, S>1$
+C. $d=\sqrt{10}, S<1$
+D. $d=\sqrt{10}, S>1$","C"
+"Given the parabola $y^2 = 16x$, what are the coordinates of the focus?","(4,0)"
+"Given that $\alpha ∈ [π/6,π/3]$, and the terminal sides of $\alpha$ and $\beta$ are symmetric about the origin, what is the maximum value of $cos \beta$?","$-\frac{1}{2}$"
+"Given the hyperbola $x^2/4 - y^2 = 1$, what is the slope of the line passing through (3,0) and having only one intersection point with the hyperbola?","$\pm \frac{1}{2}$"
+"Given that the volumes of three cylinders form a geometric sequence with a common ratio of 10, the diameter of the first cylinder is 65mm, the diameters of the second and third cylinders are 325mm, and the height of the third cylinder is 230mm, what are the heights of the first two cylinders respectively?","57.5mm, 23mm"
+"Given that $M = {a_n = b_n}$, where $a_n$ and $b_n$ are not constant sequences and are different from each other, which of the following is correct _____?
+(1) If $a_n$ and $b_n$ are both arithmetic sequences, then M contains at most one element;
+(2) If $a_n$ and $b_n$ are both geometric sequences, then M contains at most three elements;
+(3) If $a_n$ is an arithmetic sequence and $b_n$ is a geometric sequence, then M contains at most three elements;
+(4) If $a_n$ is monotonically increasing and $b_n$ is monotonically decreasing, then M contains at most one element.","(1)(3)(4)"
+"In △ABC, a = 7, A is an obtuse angle, and $\sin 2B = \frac{\sqrt{3}}{7} b \cos B$.
+(1) Find ∠A;
+(2) Choose one condition from condition ①, condition ②, and condition ③ as given, and calculate the area of △ABC.
+① b = 7; ② $\cos B = \frac{13}{14}$; ③ $c \sin A = \frac{5}{2}\sqrt{3}$.","(1) $A=\frac{2\pi}{3}$ (2) $S=\frac{15\sqrt{3}}{4}$"
+"Given a quadrilateral pyramid P-ABCD, AD//BC, AB = BC = 1, AD = 3, DE = PE = 2, E is a point on AD, PE ⊥ AD.
+(1) If F is the midpoint of PE, prove that: BF // plane PCD.
+(2) If AB ⊥ plane PED, find the cosine value of the angle between face PAB and face PCD.","(1) skipped (2) $\cos \theta = \frac{\sqrt{30}}{30}$"
+"Given that the premium for a certain type of insurance is 0.4 million yuan, the first 3 claims are 0.8 million yuan each, and the 4th claim is 0.6 million yuan.
+Number of claims | 0 | 1 | 2 | 3 | 4 |
+Number of policies | 800 | 100 | 60 | 30 | 10 |
+In a sample of 100 policies from the population, using frequency to estimate probability:
+(1) Calculate the probability of randomly selecting a policy with fewer than 2 claims;
+(2) (i) Gross profit is the difference between premium and claim amount. Let X be the gross profit, estimate the expected value of X;
+(ii) If the premium for policies without claims decreases by 4% in the next insurance period, and increases by 20% for policies with claims, estimate the expected value of gross profit for policies in the next insurance period.","(1) $\frac{1}{70}$ (2)(i) 0.122 (2)(ii) 0.1252"
+"Given the ellipse equation $C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1(a > b > 0)$, the foci and the endpoints of the minor axis form a square with side length 2. A line $l$ passing through $(0,t)(t > \sqrt{2})$ intersects the ellipse at points $A$, $B$, and $C(0,1)$. The line $AC$ intersects the ellipse at point $D$.
+(1) Find the ellipse equation and its eccentricity;
+(2) If the slope of line $BD$ is 0, find $t$.","(1) $\frac{x^2}{4}+\frac{y^2}{2} = 1$ , $e = \frac{\sqrt{3}}{2}$ (2) $t=2$"
+"Given that $f(x)=x+k\ln(1+x)$ has a tangent line $l$ at the point $(t,f(t))(t>0)$.
+(1) If the slope of the tangent line $l$ is $k=-1$, find the monotonic intervals of $f(x)$;
+(2) Prove that the tangent line $l$ does not pass through $(0,0)$;
+(3) Given $A(t,f(t))$, $C(0,f(t))$, $O(0,0)$, where $t>0$, and the tangent line $l$ intersects the $y$-axis at point $B$. When $2^{\omega O}=15\delta_{ABO}$, how many points $A$ satisfy this condition?
+(Reference data: $1.09<\ln3<1.10$, $1.60<\ln5<1.61$, $1.94<\ln7<1.95$)","(1) $f(x)$ is monotonically decreasing on $(-1,0)$ and monotonically increasing on $(0,+\infty)$ (2) skip (3) 2"
+"Let set $M=\{(i,j,s,t)|i\in\{1,2\},j\in\{3,4\},s\in\{5,6\},t\in\{7,8\},2|(i+j+s+t)\}$. For a given ordered sequence $A:\{a_n\}(1\leq n\leq 8)$, and sequence $\Omega:\omega_1,\omega_2,...,\omega_s$, where $\omega_k=(i_k,j_k,s_k,t_k)\in M$, define transformation $T$: add 1 to the $i_1,j_1,s_1,t_1$ terms of sequence $A$ to obtain sequence $T_1(A)$; add 1 to the $i_2,j_2,s_2,t_2$ terms of sequence $T_1(A)$ to obtain sequence $T_2T_1(A)$...; repeat the above operation to obtain sequence $T_s ... T_2T_1(A)$, denoted as $\Omega(A)$.
+(1) Given sequence $A:1,3,2,4,6,3,1,9$ and sequence $\Omega:(1,3,5,7),(2,4,6,8),(1,3,5,7)$, write out $\Omega(A)$;
+(2) Is there a sequence $\Omega$ that makes $\Omega(A)$ equal to $a_1+2,a_2+2,a_3+6,a_4+4,a_5+2,a_6+8,a_7+2,a_8+4,a_9+4$? If it exists, write out a $\Omega$ that meets the conditions; if it doesn't exist, please explain why;
+(3) If all terms in sequence $A$ are positive integers, and $a_1+a_2+a_3$ is even, prove that: there exists a sequence $\Omega$ such that the elements of $\Omega(A)$ satisfy the condition $a'_1+a'_2=a'_3+a'_4=a'_5+a'_6=a'_7+a'_8$.","(1) $\Omega(A): 3,4,4,5,8,4,3,10$ (2) skip (3) skip"
