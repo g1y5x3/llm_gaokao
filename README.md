@@ -1,12 +1,12 @@
 # curious how good LLMs are at gaokao (高考)
 
 ## Data Collection
-Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They were first downloaded as image format, then manually combined into a 
+Source of the exams came from http://www.zizzs.com/gk/shitiku/165462.html. They were first downloaded as image format, then manually combined into a
 single pdf file. The pdf download option from the site has too much extra stuff.
 
 Unfortunately, currently the [pdf](data/2024_math_shanghai/exam_with_answer.pdf) files are semi-manually converted to [markdown](data/2024_math_shanghai/exam_with_answer.md) (github doesn't render it well but vscode does). I have tried [marker](https://github.com/VikParuchuri/marker) to hopefully speed-up the process but the results were not usable. Probably due to the model was trained on mostly vectorized pdf data with much higher resolution. In this case, the exam pdf files were converted from jpg/png so the resolution is much smaller.
 
-Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for 
+Then use `convert.py` to generate a [csv](data/2024_math_shanghai/exam_with_answer.csv) file from manually typed markdown which is used as inputs for
 the models.
 
 ## Eval example
@@ -25,13 +25,14 @@ messages = [
 
 因此，$f(3)$ 的值是 $\sqrt{3}$。
 ```
-## Question Formatting rules 
-All of the rules were based purely on observations. They are experimental and could lead to a pretty big variation in terms of model responses. 
+## Question Formatting rules
+All of the rules were based purely on observations. They are experimental and could lead to a pretty big variation in terms of model responses.
 Unfortunately this is also the biggest pain point of evaluating these models due to being closely related to BPE.
 1. Insert ` ` before and after `$` for equations and numbers.
-2. Use language specific punctuation characters - `，。？` for Chinese and `,.?` for English except within the equations.  
+2. Use language specific punctuation characters - `，。？` for Chinese and `,.?` for English except within the equations.
+3. Use `newline` character for multiple choice questions and comprehensive questions.
 
-### TODO: add some examples to illustrate this problem 
+### TODO: add some examples to illustrate this problem
 
 ## Evaluations (graded by hand)
 All model generation were configured with `temperature = 0`, and `max_length = 4096`
@@ -39,18 +40,29 @@ All model generation were configured with `temperature = 0`, and `max_length = 4
 No partial credits and questions that involve image/graph/table understanding as well as proof are skipped.
 
 ### Prompted in Chinese
-| model              | national1  | national2  | shanghai  |
-|--------------------|------------|------------|-----------|
-| claude-3-5-sonnet  |   62/106   |   65/118   |   59/99   |
-| deepseek-coder     | __63/106__ | __91/118__ |   71/99   |
-| gpt-4o             | __63/106__ |   63/118   |   70/99   |
-| Gemini-1.5-pro     |   42/106   |   63/118   |   65/99   |
-| Qwen2-72B-Instruct |   53/106   |   59/118   | __72/99__ |
-| yi-large           |   45/106   |   55/118   |   48/99   |
+| model              | national1  | national2  |national3-1 |national3-2 | shanghai  | beijing   | tianjing  |
+|--------------------|------------|------------|------------|------------|-----------|-----------|-----------|
+| claude-3-5-sonnet  |   55/106   |   65/118   |            |            |   52/99   |           |           |
+| deepseek-coder     | __63/106__ | __91/118__ |            |            | __65/99__ |           |           |
+| gpt-4o             |   61/106   |   63/118   |            |            |   53/99   |           |           |
+| Gemini-1.5-pro     |   54/106   |   63/118   |            |            |   60/99   |           |           |
+| Qwen2-72B-Instruct |   62/106   |   59/118   |            |            |   63/99   |           |           |
+| yi-large           |   41/106   |   55/118   |            |            |   44/99   |           |           |
+
+### Prompted in English
+| model              | national1  | national2  |national3-1 |national3-2 | shanghai  | beijing   | tianjing  |
+|--------------------|------------|------------|------------|------------|-----------|-----------|-----------|
+| claude-3-5-sonnet  |            |            |            |            |           |           |           |
+| deepseek-coder     |            |            |            |            |           |           |           |
+| gpt-4o             |            |            |            |            |           |           |           |
+| Gemini-1.5-pro     |            |            |            |            |           |           |           |
+| Qwen2-72B-Instruct |            |            |            |            |           |           |           |
+| yi-large           |            |            |            |            |           |           |           |
+
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
 
-## TODO: 
+## TODO:
 - [x] This is just a mock test to set everything up in an efficient manner, need to test on some bigger and better models.
 - [x] make the response generation as deterministic as possible for reproducibility.
 - [x] manually format all questions (actually the format is almost automated through better prompting claude 3.5 to extract the texts).
