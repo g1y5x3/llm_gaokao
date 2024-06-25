@@ -45,7 +45,7 @@ No partial credits and questions that involve image/graph/table understanding as
 | deepseek-coder     | __63/106__ | __91/118__ |   71/99   |
 | gpt-4o             | __63/106__ |   63/118   |   70/99   |
 | Gemini-1.5-pro     |   42/106   |   63/118   |   65/99   |
-| Qwen2-72B-Instruct |   53/106   |            | __72/99__ |
+| Qwen2-72B-Instruct |   53/106   |   59/118   | __72/99__ |
 | yi-large           |   45/106   |   55/118   |   48/99   |
 
 _itemization of grades can be found in this [spreadsheet](https://docs.google.com/spreadsheets/d/1I4Qi6-ad34KQlryBkRMNSGbEBU05dz4OcRs-AniWwLM/edit?gid=0#gid=0)_
