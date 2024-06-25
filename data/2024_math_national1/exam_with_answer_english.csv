@@ -1,0 +1,76 @@
+"prompt","answer"
+"Given set $A = \{x | -5 < x^3 < 5\}$, $B = \{-3, -1, 0, 2, 3\}$, then $A \cap B =$ ?
+A. $\{-1, 0\}$
+B. $\{2, 3\}$
+C. $\{-3, -1, 0\}$
+D. $\{-1, 0, 2\}$","A"
+"If $\frac{z}{z-1} = 1 + i$, then $z =$ ?
+A. $-1 - i$
+B. $-1 + i$
+C. $1 - i$
+D. $1 + i$","C"
+"Given vectors $a = (0,1)$ and $b = (2,x)$. If $b ⊥ (b - 4a)$, then $x =$ ?
+A. -2
+B. -1
+C. 1
+D. 2","D"
+"Given $\cos(\alpha + \beta) = m$ and $\tan \alpha \tan \beta = 2$, what is $\cos(\alpha - \beta)$?
+A. $-3m$
+B. $\frac{m}{3}$
+C. $\frac{m}{3}$
+D. $3m$","A"
+"Given that a cylinder and a cone have equal base radii, equal lateral surface areas, and both have a height of $\sqrt{3}$, what is the volume of the cone?
+A. $2\sqrt{3}\pi$
+B. $3\sqrt{3}\pi$
+C. $6\sqrt{3}\pi$
+D. $9\sqrt{3}\pi$","B"
+"Given the function $f(x) = \begin{cases} -x^2 - 2ax - a, & x < 0 \\ e^x + \ln(x+1), & x \geq 0 \end{cases}$ is monotonically increasing on $R$, what is the range of values for $a$?
+A. $(-\infty, 0]$
+B. $[-1, 0]$
+C. $[-1, 1]$
+D. $[0, +\infty)$","B"
+"When $x \in [0, 2\pi]$, how many intersection points are there between the curves $y = \sin x$ and $y = 2\sin(3x - \frac{\pi}{6})$?
+A. 3
+B. 4
+C. 6
+D. 8","C"
+"Given that the domain of function $f(x)$ is $R$, $f(x) > f(x-1) + f(x-2)$, and when $x < 3$, $f(x) = x$, which of the following conclusions is definitely correct?
+A. $f(10) > 100$
+B. $f(20) > 1000$
+C. $f(10) < 1000$
+D. $f(20) < 10000$","B"
+"To understand the situation of mu income (unit: 10,000 yuan) after promoting exports, samples were taken from the planting area, and the sample mean of mu income after promoting exports was $\bar{x}=2.1$, with sample variance $s^2=0.01$. It is known that the mu income of this planting area in the past followed a normal distribution $M(1.8, 0.1^2)$. Assuming that the mu income $Y$ after promoting exports follows a normal distribution $N(\bar{x},s^2)$, then? (If random variable $Z$ follows a normal distribution $N(\mu, \sigma^2)$, then $P(Z < \mu + \sigma) \approx 0.8413$)
+A. $P(X > 2) > 0.2$
+B. $P(X > 2) < 0.5$
+C. $P(Y > 2) > 0.5$
+D. $P(Y > 2) < 0.8$","BC"
+"Let the function $f(x) = (x - 1)^2(x - 4)$, then?
+A. $x = 3$ is the local minimum point of $f(x)$
+B. When $0 < x < 1$, $f(x) < f(x^2)$
+C. When $1 < x < 2$, $-4 < f(2x - 1) < 0$
+D. When $-1 < x < 0$, $f(2 - x) > f(x)$","ACD"
+"The shape $\alpha$ can be considered as part of the curve C shown in the figure. It is known that C passes through the origin O, and the points on C have x-coordinates greater than -2; the product of the distance from a point on C to point F(2,0) and its distance to the fixed line x = a(a < 0) is 4. Then:
+A. $a = -2$
+B. The point $(2√2,0)$ is on C
+C. The maximum y-coordinate of points on C in the first quadrant is 1
+D. When point $(x_0,y_0)$ is on C, $y_0 ≤ \frac{4}{(x_0 + 2)}$","ABD"
+"Let the left and right foci of the hyperbola $C: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 (a > 0, b > 0)$ be $F_1$ and $F_2$ respectively. A line parallel to the y-axis is drawn through $F_2$, intersecting $C$ at points $A$ and $B$. If $|F_1A| = 13$ and $|AB| = 10$, what is the eccentricity of $C$?","$\frac{3}{2}$"
+"If the tangent line to the curve $y = e^x + x$ at the point $(0, 1)$ is also a tangent line to the curve $y = \ln(x+1) + a$, then what is the value of $a$?","$\ln2$"
+"Person A and Person B each have four cards. Each card is marked with a number. A's cards are marked with numbers 1, 3, 5, and 7. B's cards are marked with numbers 2, 4, 6, and 8. They play a four-round game. In each round, both players randomly select one card from their remaining cards and compare the numbers on the selected cards. The player with the higher number scores 1 point, while the player with the lower number scores 0 points. Then, both players discard the cards used in that round (discarded cards cannot be used in subsequent rounds). What is the probability that A's total score is at least 2 after four rounds?","$\frac{1}{2}$"
+"Let the internal angles of triangle ABC be A, B, C, and their opposite sides be a, b, c respectively. Given that $\sin C = \sqrt{2} \cos B$ and $a^2 + b^2 - c^2 = \sqrt{2}ab$.
+(1) Find B;
+(2) If the area of triangle ABC is $3 + \sqrt{3}$, find c?","(1) $B = \frac{\pi}{3}$ (2)$c = 2\sqrt{2}$"
+"Given that $A(0,3)$ and $P(3,\frac{3}{2})$ are two points on the ellipse $C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1(a > b > 0)$.
+(1) Find the eccentricity of $C$;
+(2) If a line $l$ passing through $P$ intersects $C$ at another point $B$, and the area of $\triangle ABP$ is 9, find the equation of $l$.","(1) $\frac{1}{2}$ (2) $y = \frac{1}{2} x$ 或 $y = \frac{3}{2} x -3$"
+"As shown in the figure, in the quadrangular pyramid P-ANCD, PA ⊥ base ABCD, PA = AC = 2, BC = 1, AB = √3.
+(1) If AD ⊥ AB, prove that AD ∥ plane PBC;
+(2) If AD ⊥ DC, and the sine value of the trihedral angle A-CP-D is $\frac{\sqrt{42}}{7}$, find AD?","(1) $AD \parallel$ plane $PBC$ (2) $\sqrt{3}$"
+"Given the function $f(x) = \ln \frac{x}{2-x} + ax + b(x-1)^3$,
+(1) If $b = 0$, and $f'(x) \geq 0$, find the minimum value of $a$;
+(2) Prove that the curve $y = f(x)$ is centrally symmetric;
+(3) If $f(x) > -2$ if and only if $1 < x < 2$, find the range of values for $b$.","(1)-2 (2) $y = f(x)$ is centrally symmetric about the point $(1,a)$ (3) $[-\frac{2}{3}, +\infty)$"
+"Let $m$ be a positive integer, and the sequence $a_1, a_2, \ldots, a_{4m+2}$ be an arithmetic sequence with a non-zero common difference. If after deleting two terms $a_i$ and $a_j (i < j)$, the remaining $4m$ terms can be evenly divided into $m$ groups, and the 4 numbers in each group can form an arithmetic sequence, then the sequence $a_1, a_2, \ldots, a_{4m+2}$ is called an $(i, j)$-divisible sequence.
+(1) List all $(i, j), 1 \leq i \leq j \leq 6$, that make the sequence $a_1, a_2, \ldots, a_6$ an $(i, j)$-divisible sequence.
+(2) When $m \geq 3$, prove that the sequence $a_1, a_2, \ldots, a_{4m+2}$ is a $(2, 13)$-divisible sequence.
+(3) Randomly select two numbers $i$ and $j (i < j)$ once from $1, 2, \ldots, 4m+2$. Let the probability that the sequence $a_1, a_2, \ldots, a_{4m+2}$ is an $(i, j)$-divisible sequence be $P_m$. Prove that $P_m > \frac{1}{8}$.","(1) (5,6), (1,6), (1,2) (2) skip (3) skip"

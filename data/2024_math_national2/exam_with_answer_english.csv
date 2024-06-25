@@ -1,0 +1,81 @@
+"prompt","answer"
+"Given $z = -1 - i$, what is $|z| = ( )$?
+A. 0
+B. 1
+C. √2
+D. 2","C"
+"Given proposition $p: \forall x \in R$, $|x+1|>1$; proposition $q: \exists x>0$, $x^3=x$. Then ( )?
+A. Both $p$ and $q$ are true propositions
+B. Both $\neg p$ and $q$ are true propositions
+C. Both $p$ and $\neg q$ are true propositions
+D. Both $\neg p$ and $\neg q$ are true propositions","B"
+"Given vectors $a$ and $b$ satisfying $|a|=1$, $|a+2b|=2$, and $(b-2a)⊥b$. Then $|b|= ( )$ ?
+A. $\frac{1}{2}$
+B. $\frac{\sqrt{2}}{2}$
+C. $\frac{\sqrt{3}}{2}$
+D. $1$","B"
+"A certain agricultural research department planted a new type of rice in 100 rice fields of equal area, obtained the yield per mu (unit: kg) of each field, and organized part of the data as shown in the following table:
+Yield per mu | [900,950) | [950,1000) | [1000,1050) | [1100,1150) | [1150,1200)
+Frequency | 6 | 12 | 18 | 24 | 10
+Based on the data in the table, which of the following conclusions is correct ( )?
+A. The median yield per mu of the 100 rice fields is less than 1050kg
+B. The proportion of rice fields with yield per mu below 1100kg exceeds 40% among the 100 fields
+C. The range of yield per mu for the 100 rice fields is between 200kg and 300kg
+D. The average yield per mu of the 100 rice fields is between 900kg and 1000kg","C"
+"Given the curve $C : x^2 + y^2 = 16 (y > 0)$, from any point $P$ on $C$, a perpendicular line segment $PP'$ is drawn to the $x$-axis, where $P'$ is the foot of the perpendicular. The equation of the trajectory of the midpoint $M$ of line segment $PP'$ is ( )?
+A. $\frac{x^2}{16} + \frac{y^2}{4} = 1 (y > 0)$
+B. $\frac{x^2}{16} + \frac{y^2}{8} = 1 (y > 0)$
+C. $\frac{y^2}{16} + \frac{x^2}{4} = 1 (y > 0)$
+D. $\frac{y^2}{16} + \frac{x^2}{8} = 1 (y > 0)$","A"
+"Let the function $f(x) = a(x+1)^2 - 1$, $g(x) = \cos x + 2ax$ (where $a$ is a constant). When $x \in (-1,1)$, the curves $y = f(x)$ and $y = g(x)$ have exactly one intersection point. Then $a = ( )$?
+A. -1
+B. $\frac{1}{2}$
+C. 1
+D. 2","D."
+"Given a regular triangular frustum $ABC-A_1B_1C_1$ with a volume of $\frac{32}{3}$, $AB = 6$, and $A_1B_1 = 2$, what is the tangent value of the angle between $A_1A$ and the plane $ABC$?
+A. $\frac{1}{2}$
+B. 1
+C. 2
+D. 3","B"
+"Let the function $f(x) = (x + a) \ln(x + b)$. If $f(x) \geq 0$, then the minimum value of $a^2 + b^2$ is ( )?
+A. $\frac{1}{8}$
+B. $\frac{1}{4}$
+C. $\frac{1}{2}$
+D. 1","C"
+"For the functions $f(x) = sin 2x$ and $g(x) = sin(2x - \frac{\pi}{4})$, which of the following are correct? ( )
+A. $f(x)$ and $g(x)$ have the same zeros
+B. $f(x)$ and $g(x)$ have the same maximum value
+C. $f(x)$ and $g(x)$ have the same minimum positive period
+D. The graphs of $f(x)$ and $g(x)$ have the same axis of symmetry","BC"
+"The parabola $C : y^2 = 4x$ has a directrix $l$. $P$ is a moving point on $C$. A tangent line to circle $\odot A : x^2 + (y-4)^2 = 1$ is drawn through $P$, with $Q$ as the point of tangency. A perpendicular line to $l$ is drawn through point $P$, with $B$ as the foot of the perpendicular. Then which of the following is true?
+A. $l$ is tangent to $\odot A$
+B. When $P$, $A$, and $B$ are collinear, $|PQ| = \sqrt{15}$
+C. When $|PB| = 2$, $PA \perp AB$
+D. There are exactly 2 points $A$ that satisfy $|PA| = |PB|$","ABD"
+"Let the function $f(x) = 2x^3 - 3ax^2 + 1$, then which of the following is true?
+A. When $a > 1$, $f(x)$ has three zeros
+B. When $a < 0$, $x = 0$ is a maximum point of $f(x)$
+C. There exist $a$ and $b$, such that $x = b$ is the axis of symmetry for the curve $y = f(x)$
+D. There exists $a$, such that the point $(1, f(1))$ is the center of symmetry for the curve $y = f(x)$","AD"
+"Let $S_n$ be the sum of the first n terms of an arithmetic sequence $\{a_n\}$. If $a_3 + a_4 = 7$ and $3a_2 + a_5 = 5$, then $S_{10} =$ _____?","95."
+"Given that $\alpha$ is an angle in the first quadrant, $\beta$ is an angle in the third quadrant, $\tan \alpha + \tan \beta = 4$, and $\tan \alpha \tan \beta = \sqrt{2} + 1$, find $\sin(\alpha + \beta) = _____$.","$-2\sqrt{2} \over 3$"
+"In the 4×4 grid shown above, select 4 squares such that exactly one square is selected in each row and each column. How many ways are there to make this selection? _____. Among all the selections that meet the above requirements, what is the maximum sum of the 4 numbers in the selected squares? _____.","24; 112"
+"In triangle ABC, the sides opposite to angles A, B, and C are denoted as a, b, and c respectively. Given that $sin A + \sqrt{3} cos A = 2$.
+(1) Find A.
+(2) If $a = 2, \sqrt{2b} sin C = c sin 2B$, find the perimeter of triangle ABC.","(1) $\frac{\pi}{6}$ (2) $2+3\sqrt{2}+\sqrt{6} \approx 8.6921$"
+"Given the function $f(x) = e^x - ax - a^3$,
+(1) When $a = 1$, find the equation of the tangent line to the curve $y = f(x)$ at the point $(1,f(1))$.
+(2) If $f(x)$ has a minimum value, and this minimum value is less than $0$, find the range of values for $a$.","(1) $(e-1)x-y-1=0$ (2) $(1, +\infty)$"
+"As shown in the figure, in the planar quadrilateral $ABCD$, $AB = 8$, $CD = 3$, $AD = 5\sqrt{3}$, $\angle ADC = 90°$, $\angle BAD = 30°$, points $E$ and $F$ satisfy $\overrightarrow{AE} = \frac{2}{5}\overrightarrow{AD}$, $\overrightarrow{AF} = \frac{1}{2}\overrightarrow{AB}$. $\triangle AEF$ is flipped along $EF$ to $\triangle PEF$, such that $PC = 4\sqrt{3}$.
+(1) Prove: $EF \perp PD$.
+(2) Find the sine value of the dihedral angle formed by plane $PCD$ and plane $PBF$.","(1) skip (2) $\frac{8\sqrt{65}}{65}$"
+"A certain basketball shooting competition is divided into two stages, with each participating team consisting of two members. The specific rules of the competition are as follows: In the first stage, one member of the participating team shoots 3 times. If all 3 shots miss, the team is eliminated and their competition score is 0 points. If at least one shot is made, the team enters the second stage, where the other team member shoots 3 times. Each successful shot in the second stage scores 5 points, while a miss scores 0 points. The team's competition score is the sum of points from the second stage.
+A certain participating team consists of members A and B. Let the probability of A making each shot be $p$, and the probability of B making each shot be $q$. Each shot is independent.
+(1) If $p=0.4$, $q=0.5$, and A participates in the first stage of the competition, calculate the probability that A and B's team will score at least 5 points in the competition.
+(2) Assume $0<p<q$.
+    (i) To maximize the probability of A and B's team scoring 15 points in the competition, who should participate in the first stage?
+    (ii) To maximize the expected value of A and B's team's competition score, who should participate in the first stage?","(1) 0.686 (2)(i) A (2)(ii) A"
+"Given the hyperbola $C: x^2 - y^2 = m (m > 0)$, point $P_1(5,4)$ is on $C$, $k$ is a constant, $0 < k < 1$. Points $P_n (n = 2,3,\cdots)$ are constructed in the following way: draw a line with slope $k$ through point $P_{n-1}$ intersecting the left branch of $C$ at point $Q_{n-1}$, let $P_n$ be the symmetric point of $Q_{n-1}$ with respect to the $y$-axis, and denote the coordinates of $P_n$ as $(x_n,y_n)$.
+(1) If $k = \frac{1}{2}$, find $x_2,y_2$.
+(2) Prove that the sequence ${x_n - y_n}$ is a geometric sequence with common ratio $\frac{1+k}{1-k}$.
+(3) Let $S_n$ be the area of $\triangle P_nP_{n+1}P_{n+2}$. Prove that for any positive integer $n$, $S_n = S_{n+1}$.","(1) $x_2=3,y_2=0$ (2) skip (3) skip"
