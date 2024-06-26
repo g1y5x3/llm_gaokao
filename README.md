@@ -44,17 +44,17 @@ No partial credits and questions that involve image/graph/table understanding as
 |--------------------|-----------|-----------|------------|------------|
 | deepseek-coder     |   77/99   |   57/133  |   63/106   |   92/118   |
 | claude-3-5-sonnet  |   52/99   |   53/133  |   55/106   |   65/118   |
-<!-- | gpt-4o             |   53/99   |           |           |   61/106   |   63/118   |            |            | -->
+| gpt-4o             |   62/99   |   55/133  |   60/106   |   77/118   |
 <!-- | Gemini-1.5-pro     |   60/99   |           |           |   54/106   |   63/118   |            |            | -->
 <!-- | Qwen2-72B-Instruct |   63/99   |           |           |   62/106   |   59/118   |            |            | -->
 <!-- | yi-large           |   44/99   |           |           |   41/106   |   55/118   |            |            | -->
 
-### Prompted in English
+### Prompted in English (translated by Claude 3.5)
 | model              | shanghai  | beijing   | national1  | national2  |
 |--------------------|-----------|-----------|------------|------------|
 | deepseek-coder     |   60/99   |   61/133  |   63/106   |   74/118   |
 | claude-3-5-sonnet  |   65/99   |   34/133  |   54/106   |   71/118   |
-<!-- | gpt-4o             |           |           |           |            |            |            |            | -->
+| gpt-4o             |   65/99   |   60/133  |   60/106   |   86/118   |
 <!-- | Gemini-1.5-pro     |           |           |           |            |            |            |            | -->
 <!-- | Qwen2-72B-Instruct |           |           |           |            |            |            |            | -->
 <!-- | yi-large           |           |           |           |            |            |            |            | -->

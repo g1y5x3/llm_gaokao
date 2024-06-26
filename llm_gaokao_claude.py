@@ -15,13 +15,11 @@ lang       = args.language
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 file_name = f"data/2024_math_{exam}/exam_with_answer.csv" if lang == "ch" else f"data/2024_math_{exam}/exam_with_answer_english.csv"
-
 with open(file_name, "r") as input_file:
     csv_reader = csv.reader(input_file)
     next(csv_reader)
 
     response_name = f"response/{model_name.split('/')[1]}-2024_math_{exam}.md" if lang == "ch" else f"response/{model_name.split('/')[1]}-2024_math_{exam}_english.md"
-
     with open(response_name, "w") as output_file:
         
         instruct = "\n请通过逐步推理来解答问题，并把最终答案放置于 $\\boxed{}$ 中。" if lang == "ch" else "Please solve the problem through step-by-step reasoning and place the final answer inside $\\boxed{}$."

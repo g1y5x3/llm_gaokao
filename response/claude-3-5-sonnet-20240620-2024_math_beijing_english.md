@@ -57,10 +57,10 @@ Let's approach this step-by-step:
 3) Let's expand the right side:
    $Z = i^2 - i$
 
-4) Now, we need to remember a key property of i:
+4) Now, we need to recall a key property of i:
    $i^2 = -1$
 
-5) Let's substitute this in:
+5) Let's substitute this into our equation:
    $Z = -1 - i$
 
 6) This matches option C in the given choices.
@@ -124,25 +124,29 @@ Let's approach this step-by-step:
 
 2) In our case, $a = x$, $b = -\sqrt{x}$, and $n = 4$
 
-3) We're looking for the coefficient of $x^3$, which means we need terms where the powers of $x$ add up to 3.
+3) We're looking for the coefficient of $x^3$, which means we need terms where the powers of $x$ add up to 3
 
-4) The relevant terms will be:
-   - $x^3$ from $x^4$
-   - $x^3$ from $x^3 (-\sqrt{x})$
+4) This can happen in two ways:
+   - $x^3$ directly (when $k = 0$)
+   - $x^2 \cdot x^{1/2}$ (when $k = 1$)
 
 5) Let's calculate these terms:
 
-   a) From $x^4$: $\binom{4}{0} x^4 = 1 \cdot x^4$
-      The $x^3$ coefficient here is 0.
+   For $k = 0$: $\binom{4}{0} x^4 (-\sqrt{x})^0 = x^4$
+   Coefficient: 1
 
-   b) From $x^3 (-\sqrt{x})$: $\binom{4}{1} x^3 (-\sqrt{x}) = 4 \cdot x^3 \cdot (-\sqrt{x}) = -4x^{7/2}$
-      The $x^3$ coefficient here is -4.
+   For $k = 1$: $\binom{4}{1} x^3 (-\sqrt{x})^1 = 4x^3 (-\sqrt{x}) = -4x^{7/2}$
+   Coefficient: -4
 
-6) Adding these coefficients: 0 + (-4) = -4
+6) The $x^4$ term doesn't contribute to the $x^3$ coefficient
 
-Therefore, the coefficient of $x^3$ in the expansion is -4.
+7) The coefficient of $x^3$ in $-4x^{7/2}$ is -4
 
-The answer is $\boxed{-4}$, which corresponds to option C.
+8) Therefore, the total coefficient of $x^3$ is -4
+
+The correct answer is C. -4
+
+$\boxed{-4}$
 
 Answer:B
 
@@ -477,55 +481,55 @@ Response:
 
 Let's approach this step-by-step:
 
-1) The given hyperbola equation is $x^2/4 - y^2 = 1$
+1) First, we need to understand that the line we're looking for is tangent to the hyperbola. A tangent line intersects the hyperbola at only one point.
 
-2) The line we're looking for is tangent to the hyperbola. Let's call its equation $y = mx + b$, where $m$ is the slope we're trying to find.
+2) The general equation of a line passing through (3,0) is:
+   y = m(x - 3), where m is the slope we're trying to find.
 
-3) Since the line passes through (3,0), we can say:
-   0 = 3m + b
-   b = -3m
+3) To find the intersection points of this line with the hyperbola, we need to solve the system of equations:
+   x^2/4 - y^2 = 1
+   y = m(x - 3)
 
-4) So our line equation is $y = mx - 3m$ or $y = m(x-3)$
+4) Substituting the second equation into the first:
+   x^2/4 - [m(x - 3)]^2 = 1
 
-5) To find where this line intersects the hyperbola, we substitute this y into the hyperbola equation:
+5) Expanding:
+   x^2/4 - m^2(x^2 - 6x + 9) = 1
 
-   $x^2/4 - (m(x-3))^2 = 1$
+6) Rearranging:
+   (1/4 - m^2)x^2 + 6m^2x - (9m^2 + 1) = 0
 
-6) Expand this:
-   $x^2/4 - (m^2x^2 - 6m^2x + 9m^2) = 1$
+7) For this line to be tangent, this quadratic equation should have exactly one solution. This happens when its discriminant is zero.
 
-7) Rearrange:
-   $x^2/4 - m^2x^2 + 6m^2x - 9m^2 - 1 = 0$
+8) The discriminant of ax^2 + bx + c = 0 is b^2 - 4ac. Setting this to zero:
+   (6m^2)^2 - 4(1/4 - m^2)(-(9m^2 + 1)) = 0
 
-8) Collect like terms:
-   $(1/4 - m^2)x^2 + 6m^2x - (9m^2 + 1) = 0$
+9) Expanding:
+   36m^4 - (9m^2 + 1)(1 - 4m^2) = 0
 
-9) For this to be a tangent line, this quadratic should have exactly one solution. This happens when its discriminant is zero. The discriminant of $ax^2 + bx + c = 0$ is $b^2 - 4ac$.
+10) Simplifying:
+    36m^4 - 9m^2 - 1 + 36m^4 + 4m^2 = 0
+    72m^4 - 5m^2 - 1 = 0
 
-10) In our case:
-    $a = 1/4 - m^2$
-    $b = 6m^2$
-    $c = -(9m^2 + 1)$
+11) Multiplying by 4:
+    288m^4 - 20m^2 - 4 = 0
 
-11) Set the discriminant to zero:
-    $(6m^2)^2 - 4(1/4 - m^2)(-(9m^2 + 1)) = 0$
+12) Let u = m^2, then:
+    288u^2 - 20u - 4 = 0
 
-12) Expand:
-    $36m^4 - (9m^2 + 1 - 36m^4 - 4m^2) = 0$
-    $72m^4 - 13m^2 - 1 = 0$
+13) Solving this quadratic in u:
+    u = (20 ± √(400 + 4608)) / 576
+    u = (20 ± √5008) / 576
+    u = (20 ± 70.77) / 576
 
-13) This is a quadratic in $m^2$. Solve it:
-    $m^2 = \frac{13 \pm \sqrt{169 + 288}}{144} = \frac{13 \pm \sqrt{457}}{144}$
+14) We need the positive solution:
+    u = 90.77 / 576 ≈ 0.1575
 
-14) We want the positive solution:
-    $m^2 = \frac{13 + \sqrt{457}}{144}$
+15) Since u = m^2, m = ±√0.1575 ≈ ±0.3969
 
-15) Take the square root:
-    $m = \pm \sqrt{\frac{13 + \sqrt{457}}{144}}$
+16) The positive slope corresponds to the tangent line in the first quadrant, which passes through (3,0).
 
-16) The positive value is the slope of the upward-sloping tangent line, and the negative is the slope of the downward-sloping tangent line. Since we're asked for just one slope, let's take the positive one.
-
-Therefore, the slope is $\boxed{\sqrt{\frac{13 + \sqrt{457}}{144}}}$
+Therefore, the slope of the tangent line is approximately $\boxed{0.3969}$.
 
 Answer:$\pm \frac{1}{2}$
 
@@ -748,11 +752,14 @@ Let's approach this problem step-by-step:
 (2) (i) Expected value of gross profit X:
 
    Let's calculate the expected claim amount first:
-   E(claim) = (0.8 * 0.1 + 1.6 * 0.06 + 2.4 * 0.03 + 3.0 * 0.01) = 0.33 million yuan
+   E(claim) = (0.8 * 0.1 + 0.8 * 2 * 0.06 + 0.8 * 3 * 0.03 + 0.6 * 0.01) million
+             = (0.08 + 0.096 + 0.072 + 0.006) million
+             = 0.254 million yuan
 
-   E(X) = Premium - E(claim) = 0.4 - 0.33 = 0.07 million yuan
+   E(X) = Premium - E(claim)
+        = 0.4 - 0.254 = 0.146 million yuan
 
-   $\boxed{E(X) = 0.07 \text{ million yuan}}$
+   $\boxed{E(X) = 0.146 \text{ million yuan}}$
 
 (2) (ii) Expected value of gross profit for the next period:
 
@@ -762,11 +769,12 @@ Let's approach this problem step-by-step:
    New expected premium:
    E(new premium) = 0.384 * 0.8 + 0.48 * 0.2 = 0.3072 + 0.096 = 0.4032 million yuan
 
-   The expected claim amount remains the same: 0.33 million yuan
+   The expected claim amount remains the same: 0.254 million yuan
 
-   New E(X) = 0.4032 - 0.33 = 0.0732 million yuan
+   New E(X) = E(new premium) - E(claim)
+             = 0.4032 - 0.254 = 0.1492 million yuan
 
-   $\boxed{\text{New }E(X) = 0.0732 \text{ million yuan}}$
+   $\boxed{E(X)_{\text{next period}} = 0.1492 \text{ million yuan}}$
 
 Answer:(1) $\frac{1}{70}$ (2)(i) 0.122 (2)(ii) 0.1252
 
@@ -879,16 +887,17 @@ If this line passed through (0,0), we would have:
 f(t) = t
 
 But f(t) = t + k ln(1+t) = t - 2(1+t)ln(1+t)
+
 For these to be equal:
 t - 2(1+t)ln(1+t) = t
 -2(1+t)ln(1+t) = 0
 
-This is only true if t = 0, which contradicts our given condition that t > 0.
+This is only true if t = 0, which contradicts the given condition that t > 0.
 Therefore, the tangent line does not pass through (0,0).
 
 (3) For the final part:
 
-We know that ∠ABO = 45° (since the slope of AB is -1).
+We know that ∠ABO = 45° (because the slope of AB is -1).
 Given that 2^∠ABO = 15∠ABO, we can write:
 2^(π/4) = 15(π/4)
 2^(π/4) = (15π)/4
@@ -951,14 +960,15 @@ Given: A is a sequence of positive integers and a₁+a₂+a₃ is even.
 
 Step 1: Since a₁+a₂+a₃ is even, a₄+a₅+a₆+a₇+a₈ must be even for the sum of all terms to be even.
 
-Step 2: We can construct Ω as follows:
-- If a₁+a₂ < a₃+a₄, add (1,2,5,6) to Ω until a₁+a₂ = a₃+a₄
-- If a₁+a₂ > a₃+a₄, add (3,4,5,6) to Ω until a₁+a₂ = a₃+a₄
-- Repeat similar steps to equalize a₅+a₆ and a₇+a₈ with a₁+a₂
+Step 2: We can always find a combination (i,j,s,t) ∈ M such that i and j are from {1,2,3,4} and s and t are from {5,6,7,8}.
 
-Step 3: After these operations, we have a'₁+a'₂ = a'₃+a'₄ = a'₅+a'₆ = a'₇+a'₈
+Step 3: Apply transformations using elements from M until we achieve:
+a'₁ + a'₂ = a'₃ + a'₄ (even sum)
+a'₅ + a'₆ = a'₇ + a'₈ (even sum)
 
-Step 4: If the sum of all terms is odd at this point, we can add (1,3,5,7) to Ω to make it even.
+Step 4: If these sums are not equal, we can apply (1,3,5,7) or (2,4,6,8) to adjust the sums while maintaining their evenness.
+
+Step 5: Repeat Step 4 until all sums are equal.
 
 Therefore, there always exists a sequence Ω that satisfies the condition.
 
