@@ -1,4 +1,4 @@
-import torch, argparse
+import torch, pickle, argparse
 import matplotlib.pyplot as plt
 import seaborn as sns
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -7,11 +7,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 def get_activations(model, input_ids):
     activations = []
     
+    # select only the last token's activation
     def hook_fn(module, input, output):
-        if isinstance(output, tuple):
-            activations.append(output[0].detach())
-        else:
-            activations.append(output.detach())
+        activations.append(output[0].detach().to(torch.float32).squeeze(0)[-1].cpu().numpy())
     
     hooks = []
     for layer in model.model.layers:
@@ -36,13 +34,16 @@ if __name__ == "__main__":
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto").eval()
+    print(model)
 
-    prompt = "设全集 $U=\{1,2,3,4,5\}$ ，集合 $A=\{2,4\}$ ，求 $\\bar{A}$ ？"
+    prompt = "Given the universal set $U=\{1,2,3,4,5\}$ and set $A=\{2,4\}$, find $\\bar{A}$?"
+    # prompt = "设全集 $U=\{1,2,3,4,5\}$ ，集合 $A=\{2,4\}$ ，求 $\\bar{A}$ ？"
     messages = [{"role": "user",   "content": prompt}]
     input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
 
     # Generate response token by token
     generated = input_ids.to('cuda')
+    token_activation_pairs = []
     for _ in range(max_length - len(generated[0])):
         activations = get_activations(model, generated)
 
@@ -50,32 +51,18 @@ if __name__ == "__main__":
         next_token_logits = outputs.logits[:, -1, :]
         next_token = torch.argmax(next_token_logits, dim=-1).unsqueeze(0)
 
+        print(tokenizer.decode(next_token[0], skip_special_tokens=True))
+        decoded_token = tokenizer.decode(next_token[0], skip_special_tokens=True)
+        token_activation_pairs.append((decoded_token, activations))
+
         generated = torch.cat([generated, next_token], dim=-1)
+        if next_token.item() == tokenizer.eos_token_id: break
 
-        if next_token.item() == tokenizer.eos_token_id:
-            break
-        
-        # Visualize activations
-        plt.figure(figsize=(15, 10))
-        for i, activation in enumerate(activations):
-            sns.heatmap(activation[0, -1, :].cpu().numpy().reshape(1, -1), cmap='viridis', ax=plt.subplot(len(activations), 1, i+1))
-            plt.title(f"Layer {i+1} Activation")
-        plt.tight_layout()
-        plt.savefig(f"activation_step_{len(generated[0])}.png")
-        plt.close()
+    with open("token_activations.pkl", "wb") as f:
+        pickle.dump(token_activation_pairs, f)
 
-    # output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_length=max_length)
     response = tokenizer.decode(generated[0][input_ids.shape[1]:], skip_special_tokens=True)
 
     print(f"Prompt: {prompt}\n")
     print(f"Response:\n{response}\n")
 
-    prompt = "Given the universal set $U=\{1,2,3,4,5\}$ and set $A=\{2,4\}$, find $\\bar{A}$?"
-    messages = [{"role": "user",   "content": prompt}]
-
-    input_ids = tokenizer.apply_chat_template(conversation=messages, tokenize=True, return_tensors='pt')
-    output_ids = model.generate(input_ids.to('cuda'), eos_token_id=tokenizer.eos_token_id, max_length=max_length)
-    response = tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
-
-    print(f"Prompt: {prompt}\n")
-    print(f"Response:\n{response}\n")
